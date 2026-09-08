@@ -1,0 +1,13 @@
+Command: python examples/example.py
+Traceback (most recent call last):
+  File "E:\WBF\WBF-Software-Testing-main\examples\example.py", line 206, in <module>
+    example_wbf_2_models(draw_image=draw_image)
+  File "E:\WBF\WBF-Software-Testing-main\examples\example.py", line 96, in example_wbf_2_models
+    show_boxes(boxes_list, scores_list, labels_list)
+  File "E:\WBF\WBF-Software-Testing-main\examples\example.py", line 29, in show_boxes
+    color_list = gen_color_list(len(boxes_list), len(np.unique(labels_list)))
+  File "E:\WBF\WBF-Software-Testing-main\.venv\lib\site-packages\numpy\lib\_arraysetops_impl.py", line 287, in unique
+    ar = np.asanyarray(ar)
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (2,) + inhomogeneous part.
+
+Exit code: 1

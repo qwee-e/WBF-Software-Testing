@@ -1,0 +1,13 @@
+{
+  "exit_code": 0,
+  "screenshots": [
+    "01_wbf_two_models_before.png",
+    "02_wbf_two_models_after.png",
+    "03_wbf_one_model_before.png",
+    "04_wbf_one_model_after.png",
+    "05_nms_before.png",
+    "06_nms_after.png",
+    "07_soft_nms_before.png",
+    "08_soft_nms_after.png"
+  ]
+}

@@ -1,0 +1,29 @@
+Command: python tests/test_bbox.py -v
+test_absent_model_aware_avg (__main__.TestWBF) ... ok
+test_avg (__main__.TestWBF) ... ok
+test_box_and_model_avg (__main__.TestWBF) ... ok
+test_empty_boxes_nms (__main__.TestWBF) ... ok
+test_max_conf_type (__main__.TestWBF) ... ok
+test_simple_case_for_all_methods (__main__.TestWBF) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 2.344s
+
+OK
+absent_model_aware_avg
+[[0.59966666 0.59966666 0.79966664 0.79966664]
+ [0.10470588 0.10470588 0.50470585 0.50470585]
+ [0.8        0.8        0.9        0.9       ]]
+[0.75       0.68000002 0.21666667]
+avg
+[[0.10470588 0.10470588 0.50470585 0.50470585]
+ [0.59966666 0.59966666 0.79966664 0.79966664]
+ [0.8        0.8        0.9        0.9       ]]
+[1.13333337 1.         0.21666667]
+box_and_model_avg
+[[0.59966666 0.59966666 0.79966664 0.79966664]
+ [0.10470588 0.10470588 0.50470585 0.50470585]
+ [0.8        0.8        0.9        0.9       ]]
+[0.75       0.56666668 0.21666667]
+
+Exit code: 0
