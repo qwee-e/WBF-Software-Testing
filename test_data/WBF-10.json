@@ -1,0 +1,52 @@
+{
+  "case_id": "WBF-10",
+  "title": "高于分数阈值的框保留",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          0.1,
+          0.1,
+          0.5,
+          0.5
+        ]
+      ]
+    ],
+    "scores_list": [
+      [
+        0.9
+      ]
+    ],
+    "labels_list": [
+      [
+        1
+      ]
+    ],
+    "weights": [
+      1
+    ],
+    "iou_thr": 0.55,
+    "skip_box_thr": 0.5,
+    "conf_type": "avg",
+    "allows_overflow": false
+  },
+  "expected": {
+    "boxes": [
+      [
+        0.1,
+        0.1,
+        0.5,
+        0.5
+      ]
+    ],
+    "scores": [
+      0.9
+    ],
+    "labels": [
+      1
+    ],
+    "warnings": [],
+    "contract": null
+  },
+  "basis": "0.9 > 0.5，单模型单框保留，坐标和分数不变。"
+}
