@@ -1,0 +1,13 @@
+Command: E:\WBF\WBF-Software-Testing-main\.venv\Scripts\python.exe -m pytest manual_tests/member_a/test_wbf_member_a.py -v --tb=short -k test_029__ --member-a-report=E:\WBF\WBF-Software-Testing-main\manual_tests\member_a\results\batch_08\results.json
+
+============================= test session starts =============================
+platform win32 -- Python 3.10.16, pytest-9.0.3, pluggy-1.6.0 -- E:\WBF\WBF-Software-Testing-main\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: E:\WBF\WBF-Software-Testing-main
+collecting ... collected 15 items / 14 deselected / 1 selected
+
+manual_tests/member_a/test_wbf_member_a.py::test_029__max_mode_weighted_coordinates_and_score PASSED [100%]
+
+====================== 1 passed, 14 deselected in 0.26s =======================
+
+Exit code: 0

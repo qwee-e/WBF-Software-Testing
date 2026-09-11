@@ -135,3 +135,8 @@ def test_026__zero_scores_must_not_produce_nan(probe):
     assert np.all(boxes[:, 2] > boxes[:, 0]) and np.all(boxes[:, 3] > boxes[:, 1])
     assert np.all((scores >= 0) & (scores <= 1))
     assert np.all(labels == 1)
+
+
+def test_029__max_mode_weighted_coordinates_and_score(probe):
+    spec = case(29)
+    assert_output(probe, spec["input"], spec["expected"])
