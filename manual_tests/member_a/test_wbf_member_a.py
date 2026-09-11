@@ -77,3 +77,13 @@ def test_013__coordinate_endpoints_zero_one(probe):
 def test_015__reversed_y_coordinates(probe):
     spec = case(15)
     assert_output(probe, spec["input"], spec["expected"], warning="Y2 < Y1")
+
+
+def test_017__coordinate_above_one(probe):
+    spec = case(17)
+    assert_output(probe, spec["input"], spec["expected"], warning="X2 > 1")
+
+
+def test_019__empty_model_list(probe):
+    spec = case(19)
+    assert_output(probe, spec["input"], spec["expected"])

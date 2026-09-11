@@ -1,0 +1,50 @@
+{
+  "id": "WBF-UT-017",
+  "title": "坐标大于1",
+  "source_input": "boxes=[[[0.1,0.1,1.2,0.5]]]; scores=[[0.9]]; labels=[[1]]; weights=[1]",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          0.1,
+          0.1,
+          1.2,
+          0.5
+        ]
+      ]
+    ],
+    "scores_list": [
+      [
+        0.9
+      ]
+    ],
+    "labels_list": [
+      [
+        1
+      ]
+    ],
+    "weights": [
+      1
+    ]
+  },
+  "expected": {
+    "boxes": [
+      [
+        0.1,
+        0.1,
+        1,
+        0.5
+      ]
+    ],
+    "scores": [
+      0.9
+    ],
+    "labels": [
+      1
+    ]
+  },
+  "method": "异常等价类：坐标越上界",
+  "expected_description": "x2=1.2裁剪为1，返回[0.1,0.1,1,0.5]，分数0.9，类别1；UserWarning含X2 > 1。",
+  "notes": "此用例预期裁剪，非按图像尺寸归一化。",
+  "procedure": "1. 载入test_data/member_a/WBF-UT-017.json输入。2. 使用成功复现虚拟环境运行对应pytest用例。3. 捕获返回值、形状、警告及异常，与执行前的独立预期核对。4. 保存批次日志/JSON并回填结果。"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "WBF-UT-019",
+  "title": "boxes_list为空",
+  "source_input": "boxes=[]; scores=[]; labels=[]; weights=None; iou_thr=0.55; skip_box_thr=0; conf_type='avg'",
+  "input": {
+    "boxes_list": [],
+    "scores_list": [],
+    "labels_list": [],
+    "weights": null,
+    "iou_thr": 0.55,
+    "skip_box_thr": 0,
+    "conf_type": "avg"
+  },
+  "expected": {
+    "boxes": [],
+    "scores": [],
+    "labels": []
+  },
+  "method": "边界值：0个模型的空输入",
+  "expected_description": "正常返回形状(0,4)、(0,)、(0,)的空数组，无警告，无异常。",
+  "notes": "空输入是正常边界，不要求至少一个模型。",
+  "procedure": "1. 载入test_data/member_a/WBF-UT-019.json输入。2. 使用成功复现虚拟环境运行对应pytest用例。3. 捕获返回值、形状、警告及异常，与执行前的独立预期核对。4. 保存批次日志/JSON并回填结果。"
+}

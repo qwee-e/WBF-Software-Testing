@@ -1,0 +1,132 @@
+{
+  "executed_at": "2026-09-11T09:35:01.042976+08:00",
+  "python": "3.10.16",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "numpy": "1.23.5",
+  "pytest": "9.0.3",
+  "source_commit": "e7ca508190daedc5cf033a1d4c8f1c1f0a72cb64",
+  "source_path": "ensemble_boxes/ensemble_boxes_wbf.py",
+  "source_sha256": "a9663b421bc3adf4c42d74ccb572d1e2e149ee2a1c5aab2a6e88eec46c6b13b9",
+  "matches_reproduction_success": true,
+  "pytest_exit_code": 0,
+  "results": [
+    {
+      "case_id": "WBF-UT-017",
+      "nodeid": "manual_tests/member_a/test_wbf_member_a.py::test_017__coordinate_above_one",
+      "phase": "call",
+      "status": "OK",
+      "duration_seconds": 0.008185400161892176,
+      "calls": [
+        {
+          "scenario": "spreadsheet_input",
+          "input": {
+            "boxes_list": [
+              [
+                [
+                  0.1,
+                  0.1,
+                  1.2,
+                  0.5
+                ]
+              ]
+            ],
+            "scores_list": [
+              [
+                0.9
+              ]
+            ],
+            "labels_list": [
+              [
+                1
+              ]
+            ],
+            "weights": [
+              1
+            ]
+          },
+          "output": {
+            "boxes": [
+              [
+                0.1,
+                0.1,
+                1.0,
+                0.5
+              ]
+            ],
+            "scores": [
+              0.9
+            ],
+            "labels": [
+              1.0
+            ]
+          },
+          "shapes": [
+            [
+              1,
+              4
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ]
+          ],
+          "exception": null,
+          "warnings": [
+            {
+              "category": "UserWarning",
+              "message": "X2 > 1 in box. Set it to 1. Check that you normalize boxes in [0, 1] range."
+            }
+          ],
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-019",
+      "nodeid": "manual_tests/member_a/test_wbf_member_a.py::test_019__empty_model_list",
+      "phase": "call",
+      "status": "OK",
+      "duration_seconds": 0.0006377999670803547,
+      "calls": [
+        {
+          "scenario": "spreadsheet_input",
+          "input": {
+            "boxes_list": [],
+            "scores_list": [],
+            "labels_list": [],
+            "weights": null,
+            "iou_thr": 0.55,
+            "skip_box_thr": 0,
+            "conf_type": "avg"
+          },
+          "output": {
+            "boxes": [],
+            "scores": [],
+            "labels": []
+          },
+          "shapes": [
+            [
+              0,
+              4
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ]
+          ],
+          "exception": null,
+          "warnings": [],
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "failure": null
+    }
+  ]
+}
