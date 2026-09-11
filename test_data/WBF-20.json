@@ -1,0 +1,56 @@
+{
+  "case_id": "WBF-20",
+  "title": "一个模型空输入时保留其他模型结果",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          0.1,
+          0.1,
+          0.5,
+          0.5
+        ]
+      ],
+      []
+    ],
+    "scores_list": [
+      [
+        0.9
+      ],
+      []
+    ],
+    "labels_list": [
+      [
+        1
+      ],
+      []
+    ],
+    "weights": [
+      1,
+      1
+    ],
+    "iou_thr": 0.55,
+    "skip_box_thr": 0.0,
+    "conf_type": "avg",
+    "allows_overflow": false
+  },
+  "expected": {
+    "boxes": [
+      [
+        0.1,
+        0.1,
+        0.5,
+        0.5
+      ]
+    ],
+    "scores": [
+      0.45
+    ],
+    "labels": [
+      1
+    ],
+    "warnings": [],
+    "contract": null
+  },
+  "basis": "仅一个模型贡献框，avg按全部模型权重归一化，最终分数0.9/2=0.45。"
+}

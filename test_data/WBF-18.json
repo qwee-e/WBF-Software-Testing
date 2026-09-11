@@ -1,0 +1,52 @@
+{
+  "case_id": "WBF-18",
+  "title": "零宽度及零高度框丢弃",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.5
+        ],
+        [
+          0.1,
+          0.2,
+          0.5,
+          0.2
+        ]
+      ]
+    ],
+    "scores_list": [
+      [
+        0.9,
+        0.8
+      ]
+    ],
+    "labels_list": [
+      [
+        1,
+        1
+      ]
+    ],
+    "weights": [
+      1
+    ],
+    "iou_thr": 0.55,
+    "skip_box_thr": 0.0,
+    "conf_type": "avg",
+    "allows_overflow": false
+  },
+  "expected": {
+    "boxes": [],
+    "scores": [],
+    "labels": [],
+    "warnings": [
+      "Zero area box skipped: [0.1, 0.1, 0.1, 0.5].",
+      "Zero area box skipped: [0.1, 0.2, 0.5, 0.2]."
+    ],
+    "contract": null
+  },
+  "basis": "两个框面积均为0，应分别告警并丢弃，返回形状(0,4)、(0,)、(0,)。"
+}
