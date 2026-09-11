@@ -1,0 +1,404 @@
+{
+  "started_at": "2026-09-11T15:36:59.810417+08:00",
+  "finished_at": "2026-09-11T15:37:02.488914+08:00",
+  "python": "3.10.16",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "dependencies": {
+    "numpy": "1.23.5",
+    "numba": "0.60.0",
+    "llvmlite": "0.43.0",
+    "pandas": "2.3.3",
+    "pytest": "9.0.3"
+  },
+  "source_sha256": {
+    "ensemble_boxes/__init__.py": "b50dc101add48b3b32c1dfe0a41cde67687b2d02e9bfbbd9fe09a6e4f21d69ff",
+    "ensemble_boxes/ensemble_boxes_nms.py": "b36b537b2e81fe3bf416c31974084339bbf732a96d12a75eff74119ecbb91e63",
+    "ensemble_boxes/ensemble_boxes_nmw.py": "d52caa3b8eecab9b2723fbacd59ccee48f97cbf75bfe1ab7a70ede65b55e813d",
+    "ensemble_boxes/ensemble_boxes_wbf.py": "a9663b421bc3adf4c42d74ccb572d1e2e149ee2a1c5aab2a6e88eec46c6b13b9",
+    "ensemble_boxes/ensemble_boxes_wbf_1d.py": "89365f01e92ebc5b209d556286f96d36b018dbb6ea2e464b48e515c57ef01d21",
+    "ensemble_boxes/ensemble_boxes_wbf_3d.py": "afb750d36cf86e00ce6425e2567865ff4ea500a1ab14cade82e26e417c845d5a",
+    "ensemble_boxes/ensemble_boxes_wbf_experimental.py": "2b874ecd3a021ad406d4c14447b80215f37a7a49742efae3d39bca977ff19b11"
+  },
+  "pytest_exit_code": 1,
+  "runner_exit_code": 1,
+  "case_counts": {
+    "PASS": 23,
+    "FAIL": 7
+  },
+  "instance_counts": {
+    "PASS": 24,
+    "FAIL": 7
+  },
+  "cases": [
+    {
+      "case_id": "WBF-UT-001",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-002",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-003",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-004",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-005",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-006",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-007",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-008",
+      "status": "PASS",
+      "instances": 2
+    },
+    {
+      "case_id": "WBF-UT-009",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-010",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-011",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-012",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-013",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-014",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-015",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-016",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-017",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-018",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-019",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-020",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-021",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-022",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-023",
+      "status": "FAIL",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-024",
+      "status": "FAIL",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-025",
+      "status": "FAIL",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-026",
+      "status": "FAIL",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-027",
+      "status": "FAIL",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-028",
+      "status": "FAIL",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-029",
+      "status": "PASS",
+      "instances": 1
+    },
+    {
+      "case_id": "WBF-UT-030",
+      "status": "FAIL",
+      "instances": 1
+    }
+  ],
+  "instances": [
+    {
+      "case_id": "WBF-UT-001",
+      "test": "manual_tests.member_a.test_wbf_member_a::test_001__single_valid_box",
+      "status": "PASS",
+      "duration_seconds": "0.019",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-003",
+      "test": "manual_tests.member_a.test_wbf_member_a::test_003__disjoint_same_class",
+      "status": "PASS",
+      "duration_seconds": "0.002",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-005",
+      "test": "manual_tests.member_a.test_wbf_member_a::test_005__overlap_above_threshold",
+      "status": "PASS",
+      "duration_seconds": "0.002",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-007",
+      "test": "manual_tests.member_a.test_wbf_member_a::test_007__exact_iou_boundary_and_neighbors",
+      "status": "PASS",
+      "duration_seconds": "0.003",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-009",
+      "test": "manual_tests.member_a.test_wbf_member_a::test_009__iou_threshold_one",
+      "status": "PASS",
+      "duration_seconds": "0.002",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-011",
+      "test": "manual_tests.member_a.test_wbf_member_a::test_011__score_below_filter",
+      "status": "PASS",
+      "duration_seconds": "0.001",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-013",
+      "test": "manual_tests.member_a.test_wbf_member_a::test_013__coordinate_endpoints_zero_one",
+      "status": "PASS",
+      "duration_seconds": "0.001",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-015",
+      "test": "manual_tests.member_a.test_wbf_member_a::test_015__reversed_y_coordinates",
+      "status": "PASS",
+      "duration_seconds": "0.002",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-017",
+      "test": "manual_tests.member_a.test_wbf_member_a::test_017__coordinate_above_one",
+      "status": "PASS",
+      "duration_seconds": "0.002",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-019",
+      "test": "manual_tests.member_a.test_wbf_member_a::test_019__empty_model_list",
+      "status": "PASS",
+      "duration_seconds": "0.002",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-021",
+      "test": "manual_tests.member_a.test_wbf_member_a::test_021__default_weights_equal_explicit_ones",
+      "status": "PASS",
+      "duration_seconds": "0.002",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-023",
+      "test": "manual_tests.member_a.test_wbf_member_a::test_023__mismatched_scores_raise_value_error",
+      "status": "FAIL",
+      "duration_seconds": "0.003",
+      "failure": "manual_tests\\member_a\\test_wbf_member_a.py:103: in test_023__mismatched_scores_raise_value_error\n    assert isinstance(error, ValueError), (\nE   AssertionError: Proposed robustness contract requires ValueError, got SystemExit; stdout='Error. Length of boxes arrays not equal to length of scores array: 2 != 1\\n'\nE   assert False\nE    +  where False = isinstance(SystemExit(None), ValueError)"
+    },
+    {
+      "case_id": "WBF-UT-025",
+      "test": "manual_tests.member_a.test_wbf_member_a::test_025__three_coordinates_raise_value_error",
+      "status": "FAIL",
+      "duration_seconds": "0.002",
+      "failure": "manual_tests\\member_a\\test_wbf_member_a.py:114: in test_025__three_coordinates_raise_value_error\n    assert isinstance(error, ValueError), (\nE   AssertionError: Proposed robustness contract requires ValueError, got IndexError: list index out of range\nE   assert False\nE    +  where False = isinstance(IndexError('list index out of range'), ValueError)"
+    },
+    {
+      "case_id": "WBF-UT-026",
+      "test": "manual_tests.member_a.test_wbf_member_a::test_026__zero_scores_must_not_produce_nan",
+      "status": "FAIL",
+      "duration_seconds": "0.004",
+      "failure": "manual_tests\\member_a\\test_wbf_member_a.py:131: in test_026__zero_scores_must_not_produce_nan\n    assert all(np.isfinite(a).all() for a in result), (\nE   AssertionError: Zero-score fusion must not return NaN/Inf; boxes=[[nan, nan, nan, nan]], scores=[0.0]\nE   assert False\nE    +  where False = all(<generator object test_026__zero_scores_must_not_produce_nan.<locals>.<genexpr> at 0x000001C0F33D1EE0>)"
+    },
+    {
+      "case_id": "WBF-UT-029",
+      "test": "manual_tests.member_a.test_wbf_member_a::test_029__max_mode_weighted_coordinates_and_score",
+      "status": "PASS",
+      "duration_seconds": "0.005",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-002",
+      "test": "manual_tests.test_wbf_02::test_wbf_02_identical_boxes",
+      "status": "PASS",
+      "duration_seconds": "0.003",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-004",
+      "test": "manual_tests.test_wbf_04_06::test_non_fusion[WBF-04]",
+      "status": "PASS",
+      "duration_seconds": "0.004",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-006",
+      "test": "manual_tests.test_wbf_04_06::test_non_fusion[WBF-06]",
+      "status": "PASS",
+      "duration_seconds": "0.005",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-008",
+      "test": "manual_tests.test_wbf_08::test_wbf_08_zero_threshold[edge_touch]",
+      "status": "PASS",
+      "duration_seconds": "0.003",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-008",
+      "test": "manual_tests.test_wbf_08::test_wbf_08_zero_threshold[disjoint]",
+      "status": "PASS",
+      "duration_seconds": "0.003",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-010",
+      "test": "manual_tests.test_wbf_10::test_case",
+      "status": "PASS",
+      "duration_seconds": "0.002",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-012",
+      "test": "manual_tests.test_wbf_12::test_case",
+      "status": "PASS",
+      "duration_seconds": "0.002",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-014",
+      "test": "manual_tests.test_wbf_14::test_case",
+      "status": "PASS",
+      "duration_seconds": "0.002",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-016",
+      "test": "manual_tests.test_wbf_16::test_case",
+      "status": "PASS",
+      "duration_seconds": "0.002",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-018",
+      "test": "manual_tests.test_wbf_18::test_case",
+      "status": "PASS",
+      "duration_seconds": "0.004",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-020",
+      "test": "manual_tests.test_wbf_20::test_case",
+      "status": "PASS",
+      "duration_seconds": "0.002",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-022",
+      "test": "manual_tests.test_wbf_22::test_case",
+      "status": "PASS",
+      "duration_seconds": "0.002",
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-024",
+      "test": "manual_tests.test_wbf_24::test_case",
+      "status": "FAIL",
+      "duration_seconds": "0.002",
+      "failure": "manual_tests\\test_wbf_24.py:28: in test_case\n    assert isinstance(error, ValueError), f\"Expected ValueError; observed {observation}\"\nE   AssertionError: Expected ValueError; observed {'case_id': 'WBF-24', 'warnings': [], 'exception': 'SystemExit', 'exception_message': 'None'}\nE   assert False\nE    +  where False = isinstance(SystemExit(None), ValueError)"
+    },
+    {
+      "case_id": "WBF-UT-027",
+      "test": "manual_tests.test_wbf_27::test_case",
+      "status": "FAIL",
+      "duration_seconds": "0.005",
+      "failure": "manual_tests\\test_wbf_27.py:38: in test_case\n    assert ((scores >= 0) & (scores <= 1)).all(), observation\nE   AssertionError: {'boxes': [[0.10000000894069672, 0.10000000894069672, 0.5, 0.5]], 'case_id': 'WBF-27', 'exception': None, 'exception_message': None, ...}\nE   assert False\nE    +  where False = <built-in method all of numpy.ndarray object at 0x000001C0F33E3330>()\nE    +    where <built-in method all of numpy.ndarray object at 0x000001C0F33E3330> = (array([1.19999997]) >= 0 & array([1.19999997]) <= 1).all"
+    },
+    {
+      "case_id": "WBF-UT-028",
+      "test": "manual_tests.test_wbf_28::test_case",
+      "status": "FAIL",
+      "duration_seconds": "0.002",
+      "failure": "manual_tests\\test_wbf_28.py:28: in test_case\n    assert isinstance(error, ValueError), f\"Expected ValueError; observed {observation}\"\nE   AssertionError: Expected ValueError; observed {'case_id': 'WBF-28', 'warnings': ['invalid value encountered in divide', 'invalid value encountered in double_scalars'], 'exception': None, 'exception_message': None, 'boxes': [[nan, nan, nan, nan]], 'scores': [nan], 'labels': [1.0], 'shapes': [[1, 4], [1], [1]]}\nE   assert False\nE    +  where False = isinstance(None, ValueError)"
+    },
+    {
+      "case_id": "WBF-UT-030",
+      "test": "manual_tests.test_wbf_30::test_case",
+      "status": "FAIL",
+      "duration_seconds": "0.003",
+      "failure": "manual_tests\\test_wbf_30.py:28: in test_case\n    assert isinstance(error, ValueError), f\"Expected ValueError; observed {observation}\"\nE   AssertionError: Expected ValueError; observed {'case_id': 'WBF-30', 'warnings': [], 'exception': 'SystemExit', 'exception_message': 'None'}\nE   assert False\nE    +  where False = isinstance(SystemExit(None), ValueError)"
+    }
+  ],
+  "infrastructure_errors": []
+}

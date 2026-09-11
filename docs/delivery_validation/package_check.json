@@ -1,0 +1,18 @@
+{
+  "zip_sha256": "2ff62f2fffa0bba43edd837e85e7e77528409517b64991e083a4fcff04990bce",
+  "files_verified": 134,
+  "git_on_path": false,
+  "fresh_extraction": "C:\\Users\\23800\\AppData\\Local\\Temp\\wbf_delivery_check_jemced4c\\WBF-module1-tests",
+  "started_outside_project": true,
+  "environment": "Independent .venv-test created by run_tests.bat",
+  "case_counts": {
+    "PASS": 23,
+    "FAIL": 7
+  },
+  "instance_counts": {
+    "PASS": 24,
+    "FAIL": 7
+  },
+  "exit_code": 1,
+  "infrastructure_errors": []
+}

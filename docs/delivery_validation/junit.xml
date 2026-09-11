@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="7" skipped="0" tests="31" time="1.756" timestamp="2026-09-11T15:37:00.468444+08:00" hostname="LENOVO"><testcase classname="manual_tests.member_a.test_wbf_member_a" name="test_001__single_valid_box" time="0.019"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.member_a.test_wbf_member_a" name="test_003__disjoint_same_class" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.member_a.test_wbf_member_a" name="test_005__overlap_above_threshold" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.member_a.test_wbf_member_a" name="test_007__exact_iou_boundary_and_neighbors" time="0.003"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.member_a.test_wbf_member_a" name="test_009__iou_threshold_one" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.member_a.test_wbf_member_a" name="test_011__score_below_filter" time="0.001"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.member_a.test_wbf_member_a" name="test_013__coordinate_endpoints_zero_one" time="0.001"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.member_a.test_wbf_member_a" name="test_015__reversed_y_coordinates" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.member_a.test_wbf_member_a" name="test_017__coordinate_above_one" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.member_a.test_wbf_member_a" name="test_019__empty_model_list" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.member_a.test_wbf_member_a" name="test_021__default_weights_equal_explicit_ones" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.member_a.test_wbf_member_a" name="test_023__mismatched_scores_raise_value_error" time="0.003"><failure message="AssertionError: Proposed robustness contract requires ValueError, got SystemExit; stdout='Error. Length of boxes arrays not equal to length of scores array: 2 != 1\n'&#10;assert False&#10; +  where False = isinstance(SystemExit(None), ValueError)">manual_tests\member_a\test_wbf_member_a.py:103: in test_023__mismatched_scores_raise_value_error
+    assert isinstance(error, ValueError), (
+E   AssertionError: Proposed robustness contract requires ValueError, got SystemExit; stdout='Error. Length of boxes arrays not equal to length of scores array: 2 != 1\n'
+E   assert False
+E    +  where False = isinstance(SystemExit(None), ValueError)</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.member_a.test_wbf_member_a" name="test_025__three_coordinates_raise_value_error" time="0.002"><failure message="AssertionError: Proposed robustness contract requires ValueError, got IndexError: list index out of range&#10;assert False&#10; +  where False = isinstance(IndexError('list index out of range'), ValueError)">manual_tests\member_a\test_wbf_member_a.py:114: in test_025__three_coordinates_raise_value_error
+    assert isinstance(error, ValueError), (
+E   AssertionError: Proposed robustness contract requires ValueError, got IndexError: list index out of range
+E   assert False
+E    +  where False = isinstance(IndexError('list index out of range'), ValueError)</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.member_a.test_wbf_member_a" name="test_026__zero_scores_must_not_produce_nan" time="0.004"><failure message="AssertionError: Zero-score fusion must not return NaN/Inf; boxes=[[nan, nan, nan, nan]], scores=[0.0]&#10;assert False&#10; +  where False = all(&lt;generator object test_026__zero_scores_must_not_produce_nan.&lt;locals&gt;.&lt;genexpr&gt; at 0x000001C0F33D1EE0&gt;)">manual_tests\member_a\test_wbf_member_a.py:131: in test_026__zero_scores_must_not_produce_nan
+    assert all(np.isfinite(a).all() for a in result), (
+E   AssertionError: Zero-score fusion must not return NaN/Inf; boxes=[[nan, nan, nan, nan]], scores=[0.0]
+E   assert False
+E    +  where False = all(&lt;generator object test_026__zero_scores_must_not_produce_nan.&lt;locals&gt;.&lt;genexpr&gt; at 0x000001C0F33D1EE0&gt;)</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.member_a.test_wbf_member_a" name="test_029__max_mode_weighted_coordinates_and_score" time="0.005"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.test_wbf_02" name="test_wbf_02_identical_boxes" time="0.003"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+{"boxes": [[0.10000000149011612, 0.10000000149011612, 0.4999999701976776, 0.4999999701976776]], "scores": [0.8500000238418579], "labels": [1.0], "shapes": [[1, 4], [1], [1]], "warnings": []}
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.test_wbf_04_06" name="test_non_fusion[WBF-04]" time="0.004"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+{"case_id": "WBF-04", "boxes": [[0.1, 0.1, 0.5, 0.5], [0.1, 0.1, 0.5, 0.5]], "scores": [0.45, 0.4], "labels": [1.0, 2.0], "shapes": [[2, 4], [2], [2]], "warnings": []}
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.test_wbf_04_06" name="test_non_fusion[WBF-06]" time="0.005"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+{"case_id": "WBF-06", "boxes": [[0.1, 0.1, 0.5, 0.5], [0.4, 0.4, 0.8, 0.8]], "scores": [0.45, 0.4], "labels": [1.0, 1.0], "shapes": [[2, 4], [2], [2]], "warnings": []}
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.test_wbf_08" name="test_wbf_08_zero_threshold[edge_touch]" time="0.003"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+{"case_id": "WBF-08", "scenario": "edge_touch", "boxes": [[0.1, 0.1, 0.5, 0.5], [0.5, 0.1, 0.9, 0.5]], "scores": [0.45, 0.4], "labels": [1.0, 1.0], "shapes": [[2, 4], [2], [2]], "warnings": []}
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.test_wbf_08" name="test_wbf_08_zero_threshold[disjoint]" time="0.003"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+{"case_id": "WBF-08", "scenario": "disjoint", "boxes": [[0.1, 0.1, 0.5, 0.5], [0.6, 0.1, 0.9, 0.5]], "scores": [0.45, 0.4], "labels": [1.0, 1.0], "shapes": [[2, 4], [2], [2]], "warnings": []}
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.test_wbf_10" name="test_case" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+{"case_id": "WBF-10", "warnings": [], "exception": null, "exception_message": null, "boxes": [[0.1, 0.1, 0.5, 0.5]], "scores": [0.9], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.test_wbf_12" name="test_case" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+{"case_id": "WBF-12", "warnings": [], "exception": null, "exception_message": null, "boxes": [[0.1, 0.1, 0.5, 0.5]], "scores": [0.5], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.test_wbf_14" name="test_case" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+{"case_id": "WBF-14", "warnings": ["X2 &lt; X1 value in box. Swap them."], "exception": null, "exception_message": null, "boxes": [[0.1, 0.1, 0.5, 0.5]], "scores": [0.9], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.test_wbf_16" name="test_case" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+{"case_id": "WBF-16", "warnings": ["X1 &lt; 0 in box. Set it to 0.", "Y1 &lt; 0 in box. Set it to 0."], "exception": null, "exception_message": null, "boxes": [[0.0, 0.0, 0.5, 0.5]], "scores": [0.9], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.test_wbf_18" name="test_case" time="0.004"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+{"case_id": "WBF-18", "warnings": ["Zero area box skipped: [0.1, 0.1, 0.1, 0.5].", "Zero area box skipped: [0.1, 0.2, 0.5, 0.2]."], "exception": null, "exception_message": null, "boxes": [], "scores": [], "labels": [], "shapes": [[0, 4], [0], [0]]}
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.test_wbf_20" name="test_case" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+{"case_id": "WBF-20", "warnings": [], "exception": null, "exception_message": null, "boxes": [[0.1, 0.1, 0.5, 0.5]], "scores": [0.45], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.test_wbf_22" name="test_case" time="0.002"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+{"case_id": "WBF-22", "warnings": [], "exception": null, "exception_message": null, "boxes": [[0.11538462340831757, 0.10000000894069672, 0.5153846740722656, 0.5]], "scores": [0.8666666348775228], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.test_wbf_24" name="test_case" time="0.002"><failure message="AssertionError: Expected ValueError; observed {'case_id': 'WBF-24', 'warnings': [], 'exception': 'SystemExit', 'exception_message': 'None'}&#10;assert False&#10; +  where False = isinstance(SystemExit(None), ValueError)">manual_tests\test_wbf_24.py:28: in test_case
+    assert isinstance(error, ValueError), f"Expected ValueError; observed {observation}"
+E   AssertionError: Expected ValueError; observed {'case_id': 'WBF-24', 'warnings': [], 'exception': 'SystemExit', 'exception_message': 'None'}
+E   assert False
+E    +  where False = isinstance(SystemExit(None), ValueError)</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+Error. Length of boxes arrays not equal to length of labels array: 1 != 0
+{"case_id": "WBF-24", "warnings": [], "exception": "SystemExit", "exception_message": "None"}
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.test_wbf_27" name="test_case" time="0.005"><failure message="AssertionError: {'boxes': [[0.10000000894069672, 0.10000000894069672, 0.5, 0.5]], 'case_id': 'WBF-27', 'exception': None, 'exception_message': None, ...}&#10;assert False&#10; +  where False = &lt;built-in method all of numpy.ndarray object at 0x000001C0F33E3330&gt;()&#10; +    where &lt;built-in method all of numpy.ndarray object at 0x000001C0F33E3330&gt; = (array([1.19999997]) &gt;= 0 &amp; array([1.19999997]) &lt;= 1).all">manual_tests\test_wbf_27.py:38: in test_case
+    assert ((scores &gt;= 0) &amp; (scores &lt;= 1)).all(), observation
+E   AssertionError: {'boxes': [[0.10000000894069672, 0.10000000894069672, 0.5, 0.5]], 'case_id': 'WBF-27', 'exception': None, 'exception_message': None, ...}
+E   assert False
+E    +  where False = &lt;built-in method all of numpy.ndarray object at 0x000001C0F33E3330&gt;()
+E    +    where &lt;built-in method all of numpy.ndarray object at 0x000001C0F33E3330&gt; = (array([1.19999997]) &gt;= 0 &amp; array([1.19999997]) &lt;= 1).all</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+{"case_id": "WBF-27", "warnings": [], "exception": null, "exception_message": null, "boxes": [[0.10000000894069672, 0.10000000894069672, 0.5, 0.5]], "scores": [1.1999999682108562], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.test_wbf_28" name="test_case" time="0.002"><failure message="AssertionError: Expected ValueError; observed {'case_id': 'WBF-28', 'warnings': ['invalid value encountered in divide', 'invalid value encountered in double_scalars'], 'exception': None, 'exception_message': None, 'boxes': [[nan, nan, nan, nan]], 'scores': [nan], 'labels': [1.0], 'shapes': [[1, 4], [1], [1]]}&#10;assert False&#10; +  where False = isinstance(None, ValueError)">manual_tests\test_wbf_28.py:28: in test_case
+    assert isinstance(error, ValueError), f"Expected ValueError; observed {observation}"
+E   AssertionError: Expected ValueError; observed {'case_id': 'WBF-28', 'warnings': ['invalid value encountered in divide', 'invalid value encountered in double_scalars'], 'exception': None, 'exception_message': None, 'boxes': [[nan, nan, nan, nan]], 'scores': [nan], 'labels': [1.0], 'shapes': [[1, 4], [1], [1]]}
+E   assert False
+E    +  where False = isinstance(None, ValueError)</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+{"case_id": "WBF-28", "warnings": ["invalid value encountered in divide", "invalid value encountered in double_scalars"], "exception": null, "exception_message": null, "boxes": [[NaN, NaN, NaN, NaN]], "scores": [NaN], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="manual_tests.test_wbf_30" name="test_case" time="0.003"><failure message="AssertionError: Expected ValueError; observed {'case_id': 'WBF-30', 'warnings': [], 'exception': 'SystemExit', 'exception_message': 'None'}&#10;assert False&#10; +  where False = isinstance(SystemExit(None), ValueError)">manual_tests\test_wbf_30.py:28: in test_case
+    assert isinstance(error, ValueError), f"Expected ValueError; observed {observation}"
+E   AssertionError: Expected ValueError; observed {'case_id': 'WBF-30', 'warnings': [], 'exception': 'SystemExit', 'exception_message': 'None'}
+E   assert False
+E    +  where False = isinstance(SystemExit(None), ValueError)</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+Unknown conf_type: unsupported. Must be "avg", "max" or "box_and_model_avg", or "absent_model_aware_avg"
+{"case_id": "WBF-30", "warnings": [], "exception": "SystemExit", "exception_message": "None"}
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase></testsuite></testsuites>

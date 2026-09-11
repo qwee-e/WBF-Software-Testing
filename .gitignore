@@ -5,3 +5,8 @@ __pycache__/
 .pytest_cache/
 artifacts/
 .matplotlib/
+.venv-test/
+test_results/
+deliverables/*
+!deliverables/WBF_module1_自动化测试工程.zip
+!deliverables/WBF_module1_自动化测试工程.zip.sha256

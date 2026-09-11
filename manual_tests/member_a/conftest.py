@@ -83,7 +83,9 @@ def pytest_runtest_makereport(item, call):
 
 
 def pytest_sessionfinish(session, exitstatus):
-    target = session.config.getoption("--member-a-report")
+    # This nested conftest can load after command-line parsing when the parent
+    # manual_tests directory is selected; optional reporting must stay optional.
+    target = session.config.getoption("--member-a-report", default=None)
     if not target:
         return
     source = ROOT / "ensemble_boxes/ensemble_boxes_wbf.py"

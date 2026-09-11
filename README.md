@@ -1,5 +1,15 @@
 # WBF-Software-Testing
 
+## 自动化测试工程交付
+
+双方30条用例已整合为统一入口。Windows安装Python 3.10后双击 **`run_tests.bat`**，即可自动配置测试环境并运行全部用例；已有测试环境可执行 **`python run_tests.py`**。
+
+交付文件：[自动化测试源码工程ZIP](deliverables/WBF_module1_自动化测试工程.zip)；[交付与验证记录](docs/delivery_validation/README.md)。
+
+完整说明见 [自动化测试工程README](docs/自动化测试工程_README.md)。结果写入 `test_results/时间戳/`，包含日志、JUnit、JSON和Markdown汇总。交付前统一运行：30个编号中23通过、7失败；08包含两个场景，因此pytest显示24通过、7失败，共31个实例。真实失败按原样保留。
+
+此入口与下方历史基线复现独立，采用 `requirements-test.txt` 创建的环境，不要求队友机器上的Conda环境。
+
 ## 测试工作目录
 
 ```text
@@ -59,11 +69,11 @@ python reproduce.py
 
 脚本先运行现有测试，通过后按原示例入口参数运行二维 WBF（单模型、双模型）、NMS、Soft-NMS、一维 WBF 和三维 WBF。绘图保存为 PNG，重新运行会覆盖 `artifacts/` 中同名文件。
 
-仅运行测试：
+仅运行官方自带测试（不含模块1的30条用例）：
 
 ```bash
 conda activate wbf-test
-python -m pytest -q
+python -m pytest tests/test_bbox.py -q
 ```
 
 交互式绘图可在激活环境后运行 `python -m examples.example`、`python -m examples.example_1d` 或 `python -m examples.example_3d`。OpenCV 窗口按键后继续；三维示例使用 Matplotlib 窗口。IDE 中请选择 `wbf-test` 解释器。
