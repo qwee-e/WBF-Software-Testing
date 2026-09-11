@@ -7,4 +7,4 @@
 - 共用输入数据放在 `../test_data/`，缺陷证据放在 `../defects/`。
 - 官方自带测试保留在 `../tests/`；原项目复现材料保留在 `../lry_reproduction/`，不计作人工设计的测试成果。
 
-当前仅建立目录及用途说明，尚未在此目录新增或执行测试用例。
+成员一用例及执行方式见 [member_a/README.md](member_a/README.md)；实际进度以 [执行记录](../docs/member_a/执行记录.md) 为准。

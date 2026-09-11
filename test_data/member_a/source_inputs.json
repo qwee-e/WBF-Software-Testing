@@ -1,0 +1,579 @@
+{
+  "source_filename": "附录1_WBF模块1测试用例清单_填写至Input.xlsx",
+  "source_sha256": "e07ff641ea4dc735a464d538e58cad49d5a23397c1771ce82522f2aec244b889",
+  "assignment": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11,
+    13,
+    15,
+    17,
+    19,
+    21,
+    23,
+    25,
+    26,
+    29
+  ],
+  "cases": [
+    {
+      "id": "WBF-UT-001",
+      "title": "单模型、单个合法框",
+      "source_input": "boxes=[[[0.1,0.1,0.5,0.5]]]; scores=[[0.9]]; labels=[[1]]; weights=[1]; iou_thr=0.55; skip_box_thr=0; conf_type='avg'",
+      "input": {
+        "boxes_list": [
+          [
+            [
+              0.1,
+              0.1,
+              0.5,
+              0.5
+            ]
+          ]
+        ],
+        "scores_list": [
+          [
+            0.9
+          ]
+        ],
+        "labels_list": [
+          [
+            1
+          ]
+        ],
+        "weights": [
+          1
+        ],
+        "iou_thr": 0.55,
+        "skip_box_thr": 0,
+        "conf_type": "avg"
+      }
+    },
+    {
+      "id": "WBF-UT-003",
+      "title": "双模型、完全不重叠的同类别框",
+      "source_input": "boxes=[[[0.1,0.1,0.3,0.3]],[[0.6,0.6,0.8,0.8]]]; scores=[[0.9],[0.8]]; labels=[[1],[1]]; weights=[1,1]; iou_thr=0.55",
+      "input": {
+        "boxes_list": [
+          [
+            [
+              0.1,
+              0.1,
+              0.3,
+              0.3
+            ]
+          ],
+          [
+            [
+              0.6,
+              0.6,
+              0.8,
+              0.8
+            ]
+          ]
+        ],
+        "scores_list": [
+          [
+            0.9
+          ],
+          [
+            0.8
+          ]
+        ],
+        "labels_list": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "weights": [
+          1,
+          1
+        ],
+        "iou_thr": 0.55
+      }
+    },
+    {
+      "id": "WBF-UT-005",
+      "title": "同类别，IoU明显大于阈值",
+      "source_input": "boxes=[[[0.1,0.1,0.5,0.5]],[[0.12,0.12,0.52,0.52]]]; scores=[[0.9],[0.8]]; labels=[[1],[1]]; weights=[1,1]; iou_thr=0.55",
+      "input": {
+        "boxes_list": [
+          [
+            [
+              0.1,
+              0.1,
+              0.5,
+              0.5
+            ]
+          ],
+          [
+            [
+              0.12,
+              0.12,
+              0.52,
+              0.52
+            ]
+          ]
+        ],
+        "scores_list": [
+          [
+            0.9
+          ],
+          [
+            0.8
+          ]
+        ],
+        "labels_list": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "weights": [
+          1,
+          1
+        ],
+        "iou_thr": 0.55
+      }
+    },
+    {
+      "id": "WBF-UT-007",
+      "title": "IoU恰好等于阈值",
+      "source_input": "boxes=[[[0.1,0.1,0.5,0.5]],[[0.2161290323,0.1,0.6161290323,0.5]]]; scores=[[0.9],[0.8]]; labels=[[1],[1]]; weights=[1,1]; iou_thr=0.55",
+      "input": {
+        "boxes_list": [
+          [
+            [
+              0.1,
+              0.1,
+              0.5,
+              0.5
+            ]
+          ],
+          [
+            [
+              0.2161290323,
+              0.1,
+              0.6161290323,
+              0.5
+            ]
+          ]
+        ],
+        "scores_list": [
+          [
+            0.9
+          ],
+          [
+            0.8
+          ]
+        ],
+        "labels_list": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "weights": [
+          1,
+          1
+        ],
+        "iou_thr": 0.55
+      }
+    },
+    {
+      "id": "WBF-UT-009",
+      "title": "iou_thr = 1",
+      "source_input": "boxes=[[[0.1,0.1,0.5,0.5]],[[0.1,0.1,0.5,0.5]]]; scores=[[0.9],[0.8]]; labels=[[1],[1]]; weights=[1,1]; iou_thr=1",
+      "input": {
+        "boxes_list": [
+          [
+            [
+              0.1,
+              0.1,
+              0.5,
+              0.5
+            ]
+          ],
+          [
+            [
+              0.1,
+              0.1,
+              0.5,
+              0.5
+            ]
+          ]
+        ],
+        "scores_list": [
+          [
+            0.9
+          ],
+          [
+            0.8
+          ]
+        ],
+        "labels_list": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "weights": [
+          1,
+          1
+        ],
+        "iou_thr": 1
+      }
+    },
+    {
+      "id": "WBF-UT-011",
+      "title": "score明显低于skip_box_thr",
+      "source_input": "boxes=[[[0.1,0.1,0.5,0.5]]]; scores=[[0.2]]; labels=[[1]]; weights=[1]; skip_box_thr=0.5",
+      "input": {
+        "boxes_list": [
+          [
+            [
+              0.1,
+              0.1,
+              0.5,
+              0.5
+            ]
+          ]
+        ],
+        "scores_list": [
+          [
+            0.2
+          ]
+        ],
+        "labels_list": [
+          [
+            1
+          ]
+        ],
+        "weights": [
+          1
+        ],
+        "skip_box_thr": 0.5
+      }
+    },
+    {
+      "id": "WBF-UT-013",
+      "title": "框坐标恰好覆盖0和1",
+      "source_input": "boxes=[[[0,0,1,1]]]; scores=[[0.9]]; labels=[[1]]; weights=[1]",
+      "input": {
+        "boxes_list": [
+          [
+            [
+              0,
+              0,
+              1,
+              1
+            ]
+          ]
+        ],
+        "scores_list": [
+          [
+            0.9
+          ]
+        ],
+        "labels_list": [
+          [
+            1
+          ]
+        ],
+        "weights": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "WBF-UT-015",
+      "title": "y1 > y2，纵向端点反向",
+      "source_input": "boxes=[[[0.1,0.6,0.5,0.2]]]; scores=[[0.9]]; labels=[[1]]; weights=[1]",
+      "input": {
+        "boxes_list": [
+          [
+            [
+              0.1,
+              0.6,
+              0.5,
+              0.2
+            ]
+          ]
+        ],
+        "scores_list": [
+          [
+            0.9
+          ]
+        ],
+        "labels_list": [
+          [
+            1
+          ]
+        ],
+        "weights": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "WBF-UT-017",
+      "title": "坐标大于1",
+      "source_input": "boxes=[[[0.1,0.1,1.2,0.5]]]; scores=[[0.9]]; labels=[[1]]; weights=[1]",
+      "input": {
+        "boxes_list": [
+          [
+            [
+              0.1,
+              0.1,
+              1.2,
+              0.5
+            ]
+          ]
+        ],
+        "scores_list": [
+          [
+            0.9
+          ]
+        ],
+        "labels_list": [
+          [
+            1
+          ]
+        ],
+        "weights": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "WBF-UT-019",
+      "title": "boxes_list为空",
+      "source_input": "boxes=[]; scores=[]; labels=[]; weights=None; iou_thr=0.55; skip_box_thr=0; conf_type='avg'",
+      "input": {
+        "boxes_list": [],
+        "scores_list": [],
+        "labels_list": [],
+        "weights": null,
+        "iou_thr": 0.55,
+        "skip_box_thr": 0,
+        "conf_type": "avg"
+      }
+    },
+    {
+      "id": "WBF-UT-021",
+      "title": "weights = None",
+      "source_input": "boxes=[[[0.1,0.1,0.5,0.5]],[[0.1,0.1,0.5,0.5]]]; scores=[[0.9],[0.8]]; labels=[[1],[1]]; weights=None; conf_type='avg'",
+      "input": {
+        "boxes_list": [
+          [
+            [
+              0.1,
+              0.1,
+              0.5,
+              0.5
+            ]
+          ],
+          [
+            [
+              0.1,
+              0.1,
+              0.5,
+              0.5
+            ]
+          ]
+        ],
+        "scores_list": [
+          [
+            0.9
+          ],
+          [
+            0.8
+          ]
+        ],
+        "labels_list": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "weights": null,
+        "conf_type": "avg"
+      }
+    },
+    {
+      "id": "WBF-UT-023",
+      "title": "某模型boxes数量与scores数量不一致",
+      "source_input": "boxes=[[[0.1,0.1,0.3,0.3],[0.4,0.4,0.6,0.6]]]; scores=[[0.9]]; labels=[[1,1]]; weights=[1]",
+      "input": {
+        "boxes_list": [
+          [
+            [
+              0.1,
+              0.1,
+              0.3,
+              0.3
+            ],
+            [
+              0.4,
+              0.4,
+              0.6,
+              0.6
+            ]
+          ]
+        ],
+        "scores_list": [
+          [
+            0.9
+          ]
+        ],
+        "labels_list": [
+          [
+            1,
+            1
+          ]
+        ],
+        "weights": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "WBF-UT-025",
+      "title": "单个框只有3个坐标",
+      "source_input": "boxes=[[[0.1,0.1,0.5]]]; scores=[[0.9]]; labels=[[1]]; weights=[1]",
+      "input": {
+        "boxes_list": [
+          [
+            [
+              0.1,
+              0.1,
+              0.5
+            ]
+          ]
+        ],
+        "scores_list": [
+          [
+            0.9
+          ]
+        ],
+        "labels_list": [
+          [
+            1
+          ]
+        ],
+        "weights": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "WBF-UT-026",
+      "title": "两个完全重合的同类框，score均为0",
+      "source_input": "boxes=[[[0.1,0.1,0.5,0.5]],[[0.1,0.1,0.5,0.5]]]; scores=[[0],[0]]; labels=[[1],[1]]; weights=[1,1]; skip_box_thr=0; iou_thr=0.55; conf_type='avg'",
+      "input": {
+        "boxes_list": [
+          [
+            [
+              0.1,
+              0.1,
+              0.5,
+              0.5
+            ]
+          ],
+          [
+            [
+              0.1,
+              0.1,
+              0.5,
+              0.5
+            ]
+          ]
+        ],
+        "scores_list": [
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "labels_list": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "weights": [
+          1,
+          1
+        ],
+        "skip_box_thr": 0,
+        "iou_thr": 0.55,
+        "conf_type": "avg"
+      }
+    },
+    {
+      "id": "WBF-UT-029",
+      "title": "合法conf_type='max'的融合坐标与最终分数",
+      "source_input": "boxes=[[[0.1,0.1,0.5,0.5]],[[0.15,0.1,0.55,0.5]]]; scores=[[0.9],[0.8]]; labels=[[1],[1]]; weights=[2,1]; iou_thr=0.55; conf_type='max'",
+      "input": {
+        "boxes_list": [
+          [
+            [
+              0.1,
+              0.1,
+              0.5,
+              0.5
+            ]
+          ],
+          [
+            [
+              0.15,
+              0.1,
+              0.55,
+              0.5
+            ]
+          ]
+        ],
+        "scores_list": [
+          [
+            0.9
+          ],
+          [
+            0.8
+          ]
+        ],
+        "labels_list": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "weights": [
+          2,
+          1
+        ],
+        "iou_thr": 0.55,
+        "conf_type": "max"
+      }
+    }
+  ]
+}

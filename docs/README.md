@@ -4,6 +4,9 @@
 
 已有材料索引：
 
+- [成员一模块1执行记录](member_a/执行记录.md)：分批执行结果、真实日志、异常及警告。
+- [成员一测试用例与结果表](member_a/成员一_WBF模块1测试用例与结果.xlsx)：保留原输入，仅回填成员一的执行信息。
+
 - [WBF 人工源码分析](../lry_reproduction/WBF_人工源码分析.md)：输入输出、合理范围、异常处理、融合规则和静态推导的待验证风险。
 - [原项目复现记录](../lry_reproduction/original_reproduction/README.md)：环境搭建、示例运行、官方测试及截图说明。
 - [复现成功基线](../lry_reproduction/original_reproduction/BASELINE.md)：冻结版本与恢复方法。

@@ -1,0 +1,53 @@
+{
+  "id": "WBF-UT-001",
+  "title": "单模型、单个合法框",
+  "source_input": "boxes=[[[0.1,0.1,0.5,0.5]]]; scores=[[0.9]]; labels=[[1]]; weights=[1]; iou_thr=0.55; skip_box_thr=0; conf_type='avg'",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          0.1,
+          0.1,
+          0.5,
+          0.5
+        ]
+      ]
+    ],
+    "scores_list": [
+      [
+        0.9
+      ]
+    ],
+    "labels_list": [
+      [
+        1
+      ]
+    ],
+    "weights": [
+      1
+    ],
+    "iou_thr": 0.55,
+    "skip_box_thr": 0,
+    "conf_type": "avg"
+  },
+  "expected": {
+    "boxes": [
+      [
+        0.1,
+        0.1,
+        0.5,
+        0.5
+      ]
+    ],
+    "scores": [
+      0.9
+    ],
+    "labels": [
+      1
+    ]
+  },
+  "method": "等价类：单模型单框正常输入",
+  "expected_description": "返回1框，boxes=[[0.1,0.1,0.5,0.5]]，scores=[0.9]，labels=[1]；无警告。",
+  "notes": "单框不改变坐标；一个模型时置信度缩放系数为1。",
+  "procedure": "1. 载入test_data/member_a/WBF-UT-001.json输入。2. 使用成功复现虚拟环境运行对应pytest用例。3. 捕获返回值、形状、警告及异常，与执行前的独立预期核对。4. 保存批次日志/JSON并回填结果。"
+}
