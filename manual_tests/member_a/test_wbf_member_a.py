@@ -106,3 +106,32 @@ def test_023__mismatched_scores_raise_value_error(probe):
     )
     assert str(error), "Validation error should explain the mismatch"
     assert result is None
+
+
+def test_025__three_coordinates_raise_value_error(probe):
+    spec = case(25)
+    result, error, record = probe(spec["input"])
+    assert isinstance(error, ValueError), (
+        f"Proposed robustness contract requires ValueError, got {type(error).__name__}: {error}"
+    )
+    assert str(error), "Validation error should explain the invalid box dimensions"
+    assert result is None
+
+
+def test_026__zero_scores_must_not_produce_nan(probe):
+    spec = case(26)
+    result, error, record = probe(spec["input"])
+    if isinstance(error, ValueError):
+        assert str(error), "Explicit rejection should explain zero contribution"
+        return
+    assert error is None, f"Unexpected {type(error).__name__}: {error}"
+    boxes, scores, labels = result
+    assert boxes.ndim == 2 and boxes.shape[1] == 4
+    assert scores.shape == labels.shape == (len(boxes),)
+    assert all(np.isfinite(a).all() for a in result), (
+        f"Zero-score fusion must not return NaN/Inf; boxes={boxes.tolist()}, scores={scores.tolist()}"
+    )
+    assert np.all((boxes >= 0) & (boxes <= 1))
+    assert np.all(boxes[:, 2] > boxes[:, 0]) and np.all(boxes[:, 3] > boxes[:, 1])
+    assert np.all((scores >= 0) & (scores <= 1))
+    assert np.all(labels == 1)

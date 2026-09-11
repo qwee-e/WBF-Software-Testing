@@ -1,0 +1,155 @@
+{
+  "executed_at": "2026-09-11T09:36:50.279261+08:00",
+  "python": "3.10.16",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "numpy": "1.23.5",
+  "pytest": "9.0.3",
+  "source_commit": "55c8a207ffcbc248c3562796587427e1b744e2c5",
+  "source_path": "ensemble_boxes/ensemble_boxes_wbf.py",
+  "source_sha256": "a9663b421bc3adf4c42d74ccb572d1e2e149ee2a1c5aab2a6e88eec46c6b13b9",
+  "matches_reproduction_success": true,
+  "pytest_exit_code": 1,
+  "results": [
+    {
+      "case_id": "WBF-UT-025",
+      "nodeid": "manual_tests/member_a/test_wbf_member_a.py::test_025__three_coordinates_raise_value_error",
+      "phase": "call",
+      "status": "NG",
+      "duration_seconds": 0.001294500194489956,
+      "calls": [
+        {
+          "scenario": "spreadsheet_input",
+          "input": {
+            "boxes_list": [
+              [
+                [
+                  0.1,
+                  0.1,
+                  0.5
+                ]
+              ]
+            ],
+            "scores_list": [
+              [
+                0.9
+              ]
+            ],
+            "labels_list": [
+              [
+                1
+              ]
+            ],
+            "weights": [
+              1
+            ]
+          },
+          "output": null,
+          "shapes": null,
+          "exception": {
+            "type": "IndexError",
+            "message": "list index out of range",
+            "exit_code": null,
+            "traceback": "Traceback (most recent call last):\n  File \"E:\\WBF\\WBF-Software-Testing-main\\manual_tests\\member_a\\conftest.py\", line 51, in invoke\n    result = weighted_boxes_fusion(**params)\n  File \"E:\\WBF\\WBF-Software-Testing-main\\ensemble_boxes\\ensemble_boxes_wbf.py\", line 195, in weighted_boxes_fusion\n    filtered_boxes = prefilter_boxes(boxes_list, scores_list, labels_list, weights, skip_box_thr)\n  File \"E:\\WBF\\WBF-Software-Testing-main\\ensemble_boxes\\ensemble_boxes_wbf.py\", line 32, in prefilter_boxes\n    y2 = float(box_part[3])\nIndexError: list index out of range\n"
+          },
+          "warnings": [],
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "failure": "manual_tests\\member_a\\test_wbf_member_a.py:114: in test_025__three_coordinates_raise_value_error\n    assert isinstance(error, ValueError), (\nE   AssertionError: Proposed robustness contract requires ValueError, got IndexError: list index out of range\nE   assert False\nE    +  where False = isinstance(IndexError('list index out of range'), ValueError)"
+    },
+    {
+      "case_id": "WBF-UT-026",
+      "nodeid": "manual_tests/member_a/test_wbf_member_a.py::test_026__zero_scores_must_not_produce_nan",
+      "phase": "call",
+      "status": "NG",
+      "duration_seconds": 0.0009490000084042549,
+      "calls": [
+        {
+          "scenario": "spreadsheet_input",
+          "input": {
+            "boxes_list": [
+              [
+                [
+                  0.1,
+                  0.1,
+                  0.5,
+                  0.5
+                ]
+              ],
+              [
+                [
+                  0.1,
+                  0.1,
+                  0.5,
+                  0.5
+                ]
+              ]
+            ],
+            "scores_list": [
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "labels_list": [
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "weights": [
+              1,
+              1
+            ],
+            "skip_box_thr": 0,
+            "iou_thr": 0.55,
+            "conf_type": "avg"
+          },
+          "output": {
+            "boxes": [
+              [
+                "nan",
+                "nan",
+                "nan",
+                "nan"
+              ]
+            ],
+            "scores": [
+              0.0
+            ],
+            "labels": [
+              1.0
+            ]
+          },
+          "shapes": [
+            [
+              1,
+              4
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ]
+          ],
+          "exception": null,
+          "warnings": [
+            {
+              "category": "RuntimeWarning",
+              "message": "invalid value encountered in divide"
+            }
+          ],
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "failure": "manual_tests\\member_a\\test_wbf_member_a.py:131: in test_026__zero_scores_must_not_produce_nan\n    assert all(np.isfinite(a).all() for a in result), (\nE   AssertionError: Zero-score fusion must not return NaN/Inf; boxes=[[nan, nan, nan, nan]], scores=[0.0]\nE   assert False\nE    +  where False = all(<generator object test_026__zero_scores_must_not_produce_nan.<locals>.<genexpr> at 0x000002754CD567A0>)"
+    }
+  ]
+}

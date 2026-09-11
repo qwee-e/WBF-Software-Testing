@@ -1,0 +1,30 @@
+Command: E:\WBF\WBF-Software-Testing-main\.venv\Scripts\python.exe -m pytest manual_tests/member_a/test_wbf_member_a.py -v --tb=short -k "test_025__ or test_026__" --member-a-report=E:\WBF\WBF-Software-Testing-main\manual_tests\member_a\results\batch_07\results.json
+
+============================= test session starts =============================
+platform win32 -- Python 3.10.16, pytest-9.0.3, pluggy-1.6.0 -- E:\WBF\WBF-Software-Testing-main\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: E:\WBF\WBF-Software-Testing-main
+collecting ... collected 14 items / 12 deselected / 2 selected
+
+manual_tests/member_a/test_wbf_member_a.py::test_025__three_coordinates_raise_value_error FAILED [ 50%]
+manual_tests/member_a/test_wbf_member_a.py::test_026__zero_scores_must_not_produce_nan FAILED [100%]
+
+================================== FAILURES ===================================
+________________ test_025__three_coordinates_raise_value_error ________________
+manual_tests\member_a\test_wbf_member_a.py:114: in test_025__three_coordinates_raise_value_error
+    assert isinstance(error, ValueError), (
+E   AssertionError: Proposed robustness contract requires ValueError, got IndexError: list index out of range
+E   assert False
+E    +  where False = isinstance(IndexError('list index out of range'), ValueError)
+_________________ test_026__zero_scores_must_not_produce_nan __________________
+manual_tests\member_a\test_wbf_member_a.py:131: in test_026__zero_scores_must_not_produce_nan
+    assert all(np.isfinite(a).all() for a in result), (
+E   AssertionError: Zero-score fusion must not return NaN/Inf; boxes=[[nan, nan, nan, nan]], scores=[0.0]
+E   assert False
+E    +  where False = all(<generator object test_026__zero_scores_must_not_produce_nan.<locals>.<genexpr> at 0x000002754CD567A0>)
+=========================== short test summary info ===========================
+FAILED manual_tests/member_a/test_wbf_member_a.py::test_025__three_coordinates_raise_value_error
+FAILED manual_tests/member_a/test_wbf_member_a.py::test_026__zero_scores_must_not_produce_nan
+====================== 2 failed, 12 deselected in 0.46s =======================
+
+Exit code: 1

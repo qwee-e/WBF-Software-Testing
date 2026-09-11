@@ -1,0 +1,36 @@
+{
+  "id": "WBF-UT-025",
+  "title": "单个框只有3个坐标",
+  "source_input": "boxes=[[[0.1,0.1,0.5]]]; scores=[[0.9]]; labels=[[1]]; weights=[1]",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          0.1,
+          0.1,
+          0.5
+        ]
+      ]
+    ],
+    "scores_list": [
+      [
+        0.9
+      ]
+    ],
+    "labels_list": [
+      [
+        1
+      ]
+    ],
+    "weights": [
+      1
+    ]
+  },
+  "expected": {
+    "exception": "ValueError"
+  },
+  "method": "健壮性：单框维度不足",
+  "expected_description": "建议契约：入口拒绝非4坐标框，显式抛出ValueError并说明坐标维度；不泄漏底层IndexError。",
+  "notes": "ValueError属于本次建议的健壮性要求，不宣称是原项目已有保证；错误类型差异记NG并记录为候选接口改进。",
+  "procedure": "1. 载入test_data/member_a/WBF-UT-025.json输入。2. 使用成功复现虚拟环境运行对应pytest用例。3. 捕获返回值、形状、警告及异常，与执行前的独立预期核对。4. 保存批次日志/JSON并回填结果。"
+}

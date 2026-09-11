@@ -1,0 +1,55 @@
+{
+  "id": "WBF-UT-026",
+  "title": "两个完全重合的同类框，score均为0",
+  "source_input": "boxes=[[[0.1,0.1,0.5,0.5]],[[0.1,0.1,0.5,0.5]]]; scores=[[0],[0]]; labels=[[1],[1]]; weights=[1,1]; skip_box_thr=0; iou_thr=0.55; conf_type='avg'",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          0.1,
+          0.1,
+          0.5,
+          0.5
+        ]
+      ],
+      [
+        [
+          0.1,
+          0.1,
+          0.5,
+          0.5
+        ]
+      ]
+    ],
+    "scores_list": [
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    "labels_list": [
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "weights": [
+      1,
+      1
+    ],
+    "skip_box_thr": 0,
+    "iou_thr": 0.55,
+    "conf_type": "avg"
+  },
+  "expected": {
+    "finite_output_or_explicit_rejection": true
+  },
+  "method": "数值健壮性：两个零分重合框",
+  "expected_description": "不得返回NaN/Inf。可以显式ValueError拒绝，或返回形状正确且坐标/分数有限、坐标合法的结果（包含过滤后的空结果）。",
+  "notes": "输入分数0等于过滤阈值0。当前契约未规定唯一零分处置，因此检查最低数值有效性，不预设必须保留或必须丢弃。",
+  "procedure": "1. 载入test_data/member_a/WBF-UT-026.json输入。2. 使用成功复现虚拟环境运行对应pytest用例。3. 捕获返回值、形状、警告及异常，与执行前的独立预期核对。4. 保存批次日志/JSON并回填结果。"
+}
