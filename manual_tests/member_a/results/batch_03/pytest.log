@@ -1,0 +1,14 @@
+Command: E:\WBF\WBF-Software-Testing-main\.venv\Scripts\python.exe -m pytest manual_tests/member_a/test_wbf_member_a.py -v --tb=short -k "test_009__ or test_011__" --member-a-report=E:\WBF\WBF-Software-Testing-main\manual_tests\member_a\results\batch_03\results.json
+
+============================= test session starts =============================
+platform win32 -- Python 3.10.16, pytest-9.0.3, pluggy-1.6.0 -- E:\WBF\WBF-Software-Testing-main\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: E:\WBF\WBF-Software-Testing-main
+collecting ... collected 6 items / 4 deselected / 2 selected
+
+manual_tests/member_a/test_wbf_member_a.py::test_009__iou_threshold_one PASSED [ 50%]
+manual_tests/member_a/test_wbf_member_a.py::test_011__score_below_filter PASSED [100%]
+
+======================= 2 passed, 4 deselected in 0.21s =======================
+
+Exit code: 0

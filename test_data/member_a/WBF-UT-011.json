@@ -1,0 +1,40 @@
+{
+  "id": "WBF-UT-011",
+  "title": "score明显低于skip_box_thr",
+  "source_input": "boxes=[[[0.1,0.1,0.5,0.5]]]; scores=[[0.2]]; labels=[[1]]; weights=[1]; skip_box_thr=0.5",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          0.1,
+          0.1,
+          0.5,
+          0.5
+        ]
+      ]
+    ],
+    "scores_list": [
+      [
+        0.2
+      ]
+    ],
+    "labels_list": [
+      [
+        1
+      ]
+    ],
+    "weights": [
+      1
+    ],
+    "skip_box_thr": 0.5
+  },
+  "expected": {
+    "boxes": [],
+    "scores": [],
+    "labels": []
+  },
+  "method": "等价类：低于分数过滤阈值",
+  "expected_description": "0.2<0.5，全部过滤；返回形状(0,4)、(0,)、(0,)的空数组，无警告。",
+  "notes": "原始分数在聚类前过滤。",
+  "procedure": "1. 载入test_data/member_a/WBF-UT-011.json输入。2. 使用成功复现虚拟环境运行对应pytest用例。3. 捕获返回值、形状、警告及异常，与执行前的独立预期核对。4. 保存批次日志/JSON并回填结果。"
+}

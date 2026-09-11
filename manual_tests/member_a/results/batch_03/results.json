@@ -1,0 +1,168 @@
+{
+  "executed_at": "2026-09-11T09:33:52.434390+08:00",
+  "python": "3.10.16",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "numpy": "1.23.5",
+  "pytest": "9.0.3",
+  "source_commit": "d679c884af1a7017b48216c18f22f72a5d8d26bf",
+  "source_path": "ensemble_boxes/ensemble_boxes_wbf.py",
+  "source_sha256": "a9663b421bc3adf4c42d74ccb572d1e2e149ee2a1c5aab2a6e88eec46c6b13b9",
+  "matches_reproduction_success": true,
+  "pytest_exit_code": 0,
+  "results": [
+    {
+      "case_id": "WBF-UT-009",
+      "nodeid": "manual_tests/member_a/test_wbf_member_a.py::test_009__iou_threshold_one",
+      "phase": "call",
+      "status": "OK",
+      "duration_seconds": 0.009175000013783574,
+      "calls": [
+        {
+          "scenario": "spreadsheet_input",
+          "input": {
+            "boxes_list": [
+              [
+                [
+                  0.1,
+                  0.1,
+                  0.5,
+                  0.5
+                ]
+              ],
+              [
+                [
+                  0.1,
+                  0.1,
+                  0.5,
+                  0.5
+                ]
+              ]
+            ],
+            "scores_list": [
+              [
+                0.9
+              ],
+              [
+                0.8
+              ]
+            ],
+            "labels_list": [
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "weights": [
+              1,
+              1
+            ],
+            "iou_thr": 1
+          },
+          "output": {
+            "boxes": [
+              [
+                0.1,
+                0.1,
+                0.5,
+                0.5
+              ],
+              [
+                0.1,
+                0.1,
+                0.5,
+                0.5
+              ]
+            ],
+            "scores": [
+              0.45,
+              0.4
+            ],
+            "labels": [
+              1.0,
+              1.0
+            ]
+          },
+          "shapes": [
+            [
+              2,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              2
+            ]
+          ],
+          "exception": null,
+          "warnings": [],
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-011",
+      "nodeid": "manual_tests/member_a/test_wbf_member_a.py::test_011__score_below_filter",
+      "phase": "call",
+      "status": "OK",
+      "duration_seconds": 0.0006136000156402588,
+      "calls": [
+        {
+          "scenario": "spreadsheet_input",
+          "input": {
+            "boxes_list": [
+              [
+                [
+                  0.1,
+                  0.1,
+                  0.5,
+                  0.5
+                ]
+              ]
+            ],
+            "scores_list": [
+              [
+                0.2
+              ]
+            ],
+            "labels_list": [
+              [
+                1
+              ]
+            ],
+            "weights": [
+              1
+            ],
+            "skip_box_thr": 0.5
+          },
+          "output": {
+            "boxes": [],
+            "scores": [],
+            "labels": []
+          },
+          "shapes": [
+            [
+              0,
+              4
+            ],
+            [
+              0
+            ],
+            [
+              0
+            ]
+          ],
+          "exception": null,
+          "warnings": [],
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "failure": null
+    }
+  ]
+}

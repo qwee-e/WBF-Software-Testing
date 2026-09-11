@@ -57,3 +57,13 @@ def test_007__exact_iou_boundary_and_neighbors(probe):
     ):
         params = dict(spec["supplemental_input"], iou_thr=threshold)
         assert_output(probe, params, expected, name)
+
+
+def test_009__iou_threshold_one(probe):
+    spec = case(9)
+    assert_output(probe, spec["input"], spec["expected"])
+
+
+def test_011__score_below_filter(probe):
+    spec = case(11)
+    assert_output(probe, spec["input"], spec["expected"])
