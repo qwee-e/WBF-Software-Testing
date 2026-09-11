@@ -1,0 +1,12 @@
+{
+  "time": "2026-09-11T07:11:24.708466+00:00",
+  "commit": "8b061097b03fd17ca01b358ea5f7e492ad08192b",
+  "command": "python -m pytest manual_tests/test_wbf_30.py -v -s",
+  "exit_code": 1,
+  "environment": "3.11.15 (main, Jun 11 2026, 15:14:57) [Clang 20.1.8 ]\nnumpy 2.4.6 pytest 9.1.1\n",
+  "sha256": {
+    "ensemble_boxes/ensemble_boxes_wbf.py": "a9663b421bc3adf4c42d74ccb572d1e2e149ee2a1c5aab2a6e88eec46c6b13b9",
+    "manual_tests/test_wbf_30.py": "b8a2f92ad01e7a67ab358a18eabe92a463e6f462cfd1c3ac9aaeb6419789f54e",
+    "test_data/WBF-30.json": "14b61726aad9352e8d267f3e5041c759667bac168ca85c3a0415dded073b9259"
+  }
+}

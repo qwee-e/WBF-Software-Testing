@@ -1,0 +1,168 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0 -- /opt/miniconda3/envs/wbf-test/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/rab/Software_Testing/WBF-Software-Testing
+plugins: cov-7.1.0
+collecting ... collected 16 items
+
+manual_tests/test_wbf_02.py::test_wbf_02_identical_boxes {"boxes": [[0.10000000149011612, 0.10000000149011612, 0.4999999701976776, 0.4999999701976776]], "scores": [0.8500000238418579], "labels": [1.0], "shapes": [[1, 4], [1], [1]], "warnings": []}
+PASSED
+manual_tests/test_wbf_04_06.py::test_non_fusion[WBF-04] {"case_id": "WBF-04", "boxes": [[0.1, 0.1, 0.5, 0.5], [0.1, 0.1, 0.5, 0.5]], "scores": [0.45, 0.4], "labels": [1.0, 2.0], "shapes": [[2, 4], [2], [2]], "warnings": []}
+PASSED
+manual_tests/test_wbf_04_06.py::test_non_fusion[WBF-06] {"case_id": "WBF-06", "boxes": [[0.1, 0.1, 0.5, 0.5], [0.4, 0.4, 0.8, 0.8]], "scores": [0.45, 0.4], "labels": [1.0, 1.0], "shapes": [[2, 4], [2], [2]], "warnings": []}
+PASSED
+manual_tests/test_wbf_08.py::test_wbf_08_zero_threshold[edge_touch] {"case_id": "WBF-08", "scenario": "edge_touch", "boxes": [[0.1, 0.1, 0.5, 0.5], [0.5, 0.1, 0.9, 0.5]], "scores": [0.45, 0.4], "labels": [1.0, 1.0], "shapes": [[2, 4], [2], [2]], "warnings": []}
+PASSED
+manual_tests/test_wbf_08.py::test_wbf_08_zero_threshold[disjoint] {"case_id": "WBF-08", "scenario": "disjoint", "boxes": [[0.1, 0.1, 0.5, 0.5], [0.6, 0.1, 0.9, 0.5]], "scores": [0.45, 0.4], "labels": [1.0, 1.0], "shapes": [[2, 4], [2], [2]], "warnings": []}
+PASSED
+manual_tests/test_wbf_10.py::test_case {"case_id": "WBF-10", "warnings": [], "exception": null, "exception_message": null, "boxes": [[0.1, 0.1, 0.5, 0.5]], "scores": [0.9], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+PASSED
+manual_tests/test_wbf_12.py::test_case {"case_id": "WBF-12", "warnings": [], "exception": null, "exception_message": null, "boxes": [[0.1, 0.1, 0.5, 0.5]], "scores": [0.5], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+PASSED
+manual_tests/test_wbf_14.py::test_case {"case_id": "WBF-14", "warnings": ["X2 < X1 value in box. Swap them."], "exception": null, "exception_message": null, "boxes": [[0.1, 0.1, 0.5, 0.5]], "scores": [0.9], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+PASSED
+manual_tests/test_wbf_16.py::test_case {"case_id": "WBF-16", "warnings": ["X1 < 0 in box. Set it to 0.", "Y1 < 0 in box. Set it to 0."], "exception": null, "exception_message": null, "boxes": [[0.0, 0.0, 0.5, 0.5]], "scores": [0.9], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+PASSED
+manual_tests/test_wbf_18.py::test_case {"case_id": "WBF-18", "warnings": ["Zero area box skipped: [0.1, 0.1, 0.1, 0.5].", "Zero area box skipped: [0.1, 0.2, 0.5, 0.2]."], "exception": null, "exception_message": null, "boxes": [], "scores": [], "labels": [], "shapes": [[0, 4], [0], [0]]}
+PASSED
+manual_tests/test_wbf_20.py::test_case {"case_id": "WBF-20", "warnings": [], "exception": null, "exception_message": null, "boxes": [[0.1, 0.1, 0.5, 0.5]], "scores": [0.45], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+PASSED
+manual_tests/test_wbf_22.py::test_case {"case_id": "WBF-22", "warnings": [], "exception": null, "exception_message": null, "boxes": [[0.11538462340831757, 0.10000000894069672, 0.5153846144676208, 0.4999999701976776]], "scores": [0.8666666348775228], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+PASSED
+manual_tests/test_wbf_24.py::test_case Error. Length of boxes arrays not equal to length of labels array: 1 != 0
+{"case_id": "WBF-24", "warnings": [], "exception": "SystemExit", "exception_message": "None"}
+FAILED
+manual_tests/test_wbf_27.py::test_case {"case_id": "WBF-27", "warnings": [], "exception": null, "exception_message": null, "boxes": [[0.10000000149011612, 0.10000000149011612, 0.5, 0.5]], "scores": [1.1999999682108562], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+FAILED
+manual_tests/test_wbf_28.py::test_case {"case_id": "WBF-28", "warnings": ["invalid value encountered in divide", "invalid value encountered in scalar divide"], "exception": null, "exception_message": null, "boxes": [[NaN, NaN, NaN, NaN]], "scores": [NaN], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+FAILED
+manual_tests/test_wbf_30.py::test_case Unknown conf_type: unsupported. Must be "avg", "max" or "box_and_model_avg", or "absent_model_aware_avg"
+{"case_id": "WBF-30", "warnings": [], "exception": "SystemExit", "exception_message": "None"}
+FAILED
+
+=================================== FAILURES ===================================
+__________________________________ test_case ___________________________________
+
+    def test_case():
+        case = json.loads((Path(__file__).resolve().parents[1] / "test_data" / "WBF-24.json").read_text())
+        expected = case["expected"]
+        error = None
+        result = None
+        with warnings.catch_warnings(record=True) as caught:
+            warnings.simplefilter("always")
+            try:
+                result = weighted_boxes_fusion(**case["input"])
+            except (Exception, SystemExit) as exc:
+                error = exc
+        observation = {"case_id": case["case_id"], "warnings": [str(w.message) for w in caught],
+                       "exception": None if error is None else type(error).__name__,
+                       "exception_message": None if error is None else str(error)}
+        if result is not None:
+            observation.update(zip(("boxes", "scores", "labels"), [a.tolist() for a in result]))
+            observation["shapes"] = [list(a.shape) for a in result]
+        print(json.dumps(observation, ensure_ascii=False))
+        if expected["contract"] == "value_error":
+>           assert isinstance(error, ValueError), f"Expected ValueError; observed {observation}"
+E           AssertionError: Expected ValueError; observed {'case_id': 'WBF-24', 'warnings': [], 'exception': 'SystemExit', 'exception_message': 'None'}
+E           assert False
+E            +  where False = isinstance(SystemExit(None), ValueError)
+
+manual_tests/test_wbf_24.py:28: AssertionError
+__________________________________ test_case ___________________________________
+
+    def test_case():
+        case = json.loads((Path(__file__).resolve().parents[1] / "test_data" / "WBF-27.json").read_text())
+        expected = case["expected"]
+        error = None
+        result = None
+        with warnings.catch_warnings(record=True) as caught:
+            warnings.simplefilter("always")
+            try:
+                result = weighted_boxes_fusion(**case["input"])
+            except (Exception, SystemExit) as exc:
+                error = exc
+        observation = {"case_id": case["case_id"], "warnings": [str(w.message) for w in caught],
+                       "exception": None if error is None else type(error).__name__,
+                       "exception_message": None if error is None else str(error)}
+        if result is not None:
+            observation.update(zip(("boxes", "scores", "labels"), [a.tolist() for a in result]))
+            observation["shapes"] = [list(a.shape) for a in result]
+        print(json.dumps(observation, ensure_ascii=False))
+        if expected["contract"] == "value_error":
+            assert isinstance(error, ValueError), f"Expected ValueError; observed {observation}"
+            return
+        assert error is None, observation
+        boxes, scores, labels = result
+        assert all(np.isfinite(a).all() for a in result), observation
+        if expected["contract"] == "bounded":
+            assert boxes.shape == (1, 4)
+            np.testing.assert_allclose(boxes, [[.1, .1, .5, .5]], rtol=0, atol=1e-6)
+            np.testing.assert_array_equal(labels, [1])
+            assert scores.shape == (1,)
+>           assert ((scores >= 0) & (scores <= 1)).all(), observation
+E           AssertionError: {'case_id': 'WBF-27', 'warnings': [], 'exception': None, 'exception_message': None, ...}
+E           assert np.False_
+E            +  where np.False_ = <built-in method all of numpy.ndarray object at 0x103f4a250>()
+E            +    where <built-in method all of numpy.ndarray object at 0x103f4a250> = (array([1.19999997]) >= 0 & array([1.19999997]) <= 1).all
+
+manual_tests/test_wbf_27.py:38: AssertionError
+__________________________________ test_case ___________________________________
+
+    def test_case():
+        case = json.loads((Path(__file__).resolve().parents[1] / "test_data" / "WBF-28.json").read_text())
+        expected = case["expected"]
+        error = None
+        result = None
+        with warnings.catch_warnings(record=True) as caught:
+            warnings.simplefilter("always")
+            try:
+                result = weighted_boxes_fusion(**case["input"])
+            except (Exception, SystemExit) as exc:
+                error = exc
+        observation = {"case_id": case["case_id"], "warnings": [str(w.message) for w in caught],
+                       "exception": None if error is None else type(error).__name__,
+                       "exception_message": None if error is None else str(error)}
+        if result is not None:
+            observation.update(zip(("boxes", "scores", "labels"), [a.tolist() for a in result]))
+            observation["shapes"] = [list(a.shape) for a in result]
+        print(json.dumps(observation, ensure_ascii=False))
+        if expected["contract"] == "value_error":
+>           assert isinstance(error, ValueError), f"Expected ValueError; observed {observation}"
+E           AssertionError: Expected ValueError; observed {'case_id': 'WBF-28', 'warnings': ['invalid value encountered in divide', 'invalid value encountered in scalar divide'], 'exception': None, 'exception_message': None, 'boxes': [[nan, nan, nan, nan]], 'scores': [nan], 'labels': [1.0], 'shapes': [[1, 4], [1], [1]]}
+E           assert False
+E            +  where False = isinstance(None, ValueError)
+
+manual_tests/test_wbf_28.py:28: AssertionError
+__________________________________ test_case ___________________________________
+
+    def test_case():
+        case = json.loads((Path(__file__).resolve().parents[1] / "test_data" / "WBF-30.json").read_text())
+        expected = case["expected"]
+        error = None
+        result = None
+        with warnings.catch_warnings(record=True) as caught:
+            warnings.simplefilter("always")
+            try:
+                result = weighted_boxes_fusion(**case["input"])
+            except (Exception, SystemExit) as exc:
+                error = exc
+        observation = {"case_id": case["case_id"], "warnings": [str(w.message) for w in caught],
+                       "exception": None if error is None else type(error).__name__,
+                       "exception_message": None if error is None else str(error)}
+        if result is not None:
+            observation.update(zip(("boxes", "scores", "labels"), [a.tolist() for a in result]))
+            observation["shapes"] = [list(a.shape) for a in result]
+        print(json.dumps(observation, ensure_ascii=False))
+        if expected["contract"] == "value_error":
+>           assert isinstance(error, ValueError), f"Expected ValueError; observed {observation}"
+E           AssertionError: Expected ValueError; observed {'case_id': 'WBF-30', 'warnings': [], 'exception': 'SystemExit', 'exception_message': 'None'}
+E           assert False
+E            +  where False = isinstance(SystemExit(None), ValueError)
+
+manual_tests/test_wbf_30.py:28: AssertionError
+=========================== short test summary info ============================
+FAILED manual_tests/test_wbf_24.py::test_case - AssertionError: Expected Valu...
+FAILED manual_tests/test_wbf_27.py::test_case - AssertionError: {'case_id': '...
+FAILED manual_tests/test_wbf_28.py::test_case - AssertionError: Expected Valu...
+FAILED manual_tests/test_wbf_30.py::test_case - AssertionError: Expected Valu...
+========================= 4 failed, 12 passed in 0.14s =========================

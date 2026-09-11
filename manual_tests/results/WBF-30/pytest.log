@@ -1,0 +1,42 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0 -- /opt/miniconda3/envs/wbf-test/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/rab/Software_Testing/WBF-Software-Testing
+plugins: cov-7.1.0
+collecting ... collected 1 item
+
+manual_tests/test_wbf_30.py::test_case Unknown conf_type: unsupported. Must be "avg", "max" or "box_and_model_avg", or "absent_model_aware_avg"
+{"case_id": "WBF-30", "warnings": [], "exception": "SystemExit", "exception_message": "None"}
+FAILED
+
+=================================== FAILURES ===================================
+__________________________________ test_case ___________________________________
+
+    def test_case():
+        case = json.loads((Path(__file__).resolve().parents[1] / "test_data" / "WBF-30.json").read_text())
+        expected = case["expected"]
+        error = None
+        result = None
+        with warnings.catch_warnings(record=True) as caught:
+            warnings.simplefilter("always")
+            try:
+                result = weighted_boxes_fusion(**case["input"])
+            except (Exception, SystemExit) as exc:
+                error = exc
+        observation = {"case_id": case["case_id"], "warnings": [str(w.message) for w in caught],
+                       "exception": None if error is None else type(error).__name__,
+                       "exception_message": None if error is None else str(error)}
+        if result is not None:
+            observation.update(zip(("boxes", "scores", "labels"), [a.tolist() for a in result]))
+            observation["shapes"] = [list(a.shape) for a in result]
+        print(json.dumps(observation, ensure_ascii=False))
+        if expected["contract"] == "value_error":
+>           assert isinstance(error, ValueError), f"Expected ValueError; observed {observation}"
+E           AssertionError: Expected ValueError; observed {'case_id': 'WBF-30', 'warnings': [], 'exception': 'SystemExit', 'exception_message': 'None'}
+E           assert False
+E            +  where False = isinstance(SystemExit(None), ValueError)
+
+manual_tests/test_wbf_30.py:28: AssertionError
+=========================== short test summary info ============================
+FAILED manual_tests/test_wbf_30.py::test_case - AssertionError: Expected Valu...
+============================== 1 failed in 0.23s ===============================

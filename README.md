@@ -14,7 +14,7 @@ WBF-Software-Testing/
 
 - `ensemble_boxes/`：保留官方算法实现，被测入口为 `weighted_boxes_fusion()`。
 - `tests/`：保留官方自带测试，与自行设计的人工测试区分。
-- [manual_tests/](manual_tests/README.md)：模块1人工设计的测试用例、测试脚本与执行记录。
+- [manual_tests/](manual_tests/)：模块1人工设计的测试用例、测试脚本与执行记录。
 - [test_data/](test_data/README.md)：测试输入和预期结果数据。
 - [defects/](defects/README.md)：缺陷复现步骤、证据和分析材料。
 - [docs/](docs/README.md)：需求分析、测试计划及报告材料。
@@ -73,3 +73,5 @@ python -m pytest -q
 - 新增 `reproduce.py`，统一运行测试与示例，保存环境、日志和图片。
 - 修复二维示例对不等长标签列表直接调用 `np.unique` 导致的 NumPy 2 报错：先展平标签再统计类别，仅修改绘图辅助代码，算法实现不变。
 - 补充忽略规则，排除虚拟环境、缓存和本地生成结果。
+
+成员二记录10起的测试内容、执行结果和证据见[执行汇总](manual_tests/member_b.md)。

@@ -1,0 +1,41 @@
+{
+  "case_id": "WBF-30",
+  "title": "不支持的置信度类型异常",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          0.1,
+          0.1,
+          0.5,
+          0.5
+        ]
+      ]
+    ],
+    "scores_list": [
+      [
+        0.9
+      ]
+    ],
+    "labels_list": [
+      [
+        1
+      ]
+    ],
+    "weights": [
+      1
+    ],
+    "iou_thr": 0.55,
+    "skip_box_thr": 0.0,
+    "conf_type": "unsupported",
+    "allows_overflow": false
+  },
+  "expected": {
+    "boxes": null,
+    "scores": null,
+    "labels": null,
+    "warnings": [],
+    "contract": "value_error"
+  },
+  "basis": "建议接口契约：不支持的枚举值应抛出ValueError，不能调用exit终止宿主进程；该契约待评审。"
+}

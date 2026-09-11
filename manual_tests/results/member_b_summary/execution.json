@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/opt/miniconda3/envs/wbf-test/bin/python",
+    "-m",
+    "pytest",
+    "manual_tests/test_wbf_02.py",
+    "manual_tests/test_wbf_04_06.py",
+    "manual_tests/test_wbf_08.py",
+    "manual_tests/test_wbf_10.py",
+    "manual_tests/test_wbf_12.py",
+    "manual_tests/test_wbf_14.py",
+    "manual_tests/test_wbf_16.py",
+    "manual_tests/test_wbf_18.py",
+    "manual_tests/test_wbf_20.py",
+    "manual_tests/test_wbf_22.py",
+    "manual_tests/test_wbf_24.py",
+    "manual_tests/test_wbf_27.py",
+    "manual_tests/test_wbf_28.py",
+    "manual_tests/test_wbf_30.py",
+    "-v",
+    "-s"
+  ],
+  "exit_code": 1,
+  "time": "2026-09-11T07:11:25.082448+00:00",
+  "commit": "8b061097b03fd17ca01b358ea5f7e492ad08192b"
+}
