@@ -1,0 +1,21 @@
+{
+  "executed_at": "2026-09-11T14:33:02.166627+08:00",
+  "code_commit": "85cf6d74dae8c6ed9f18192fd90c16baf6bc0151",
+  "sha256": {
+    "ensemble_boxes/ensemble_boxes_wbf.py": "a9663b421bc3adf4c42d74ccb572d1e2e149ee2a1c5aab2a6e88eec46c6b13b9",
+    "manual_tests/test_wbf_04_06.py": "d7ee2a362911d43ac57f5a2ceb4a13f47f3c24fb1af824cabb6185c474a3017b",
+    "test_data/WBF-04.json": "be4911ce8caae2ed83e74dd2c9b3ff09a76e48e5a2924cf2b6888b03c190b098",
+    "test_data/WBF-06.json": "34daa37d80937de6211a10594bb467b17c9433472cfab6f60954e8ad0c69d23c"
+  },
+  "python": "3.11.15 (main, Jun 11 2026, 15:14:57) [Clang 20.1.8 ]",
+  "executable": "/opt/miniconda3/envs/wbf-test/bin/python",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "numba": "0.67.0",
+    "pandas": "3.0.5",
+    "pytest": "9.1.1"
+  },
+  "command": "python -m pytest manual_tests/test_wbf_04_06.py -v -s",
+  "exit_code": 0,
+  "status": "PASS"
+}

@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0 -- /opt/miniconda3/envs/wbf-test/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/rab/Software_Testing/WBF-Software-Testing
+plugins: cov-7.1.0
+collecting ... collected 2 items
+
+manual_tests/test_wbf_04_06.py::test_non_fusion[WBF-04] {"case_id": "WBF-04", "boxes": [[0.1, 0.1, 0.5, 0.5], [0.1, 0.1, 0.5, 0.5]], "scores": [0.45, 0.4], "labels": [1.0, 2.0], "shapes": [[2, 4], [2], [2]], "warnings": []}
+PASSED
+manual_tests/test_wbf_04_06.py::test_non_fusion[WBF-06] {"case_id": "WBF-06", "boxes": [[0.1, 0.1, 0.5, 0.5], [0.4, 0.4, 0.8, 0.8]], "scores": [0.45, 0.4], "labels": [1.0, 1.0], "shapes": [[2, 4], [2], [2]], "warnings": []}
+PASSED
+
+============================== 2 passed in 0.27s ===============================

@@ -10,3 +10,5 @@
 成员一用例及执行方式见 [member_a/README.md](member_a/README.md)；实际进度以 [执行记录](../docs/member_a/执行记录.md) 为准。
 
 测试 02（双模型完全相同且同类别的框）已执行通过，设计、手算预期与执行证据见 [WBF-02.md](WBF-02.md)，脚本为 `test_wbf_02.py`。该用例采用 AI 辅助编写与执行，需本人复核。
+
+测试 04（同坐标不同类别隔离）和 06（同类别低 IoU 不融合）已执行通过，设计与执行证据见 [WBF-04-06.md](WBF-04-06.md)，脚本为 `test_wbf_04_06.py`，固定输入与手算预期位于 `test_data/WBF-04.json`、`test_data/WBF-06.json`。
