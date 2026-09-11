@@ -1,0 +1,11 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0 -- /opt/miniconda3/envs/wbf-test/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/rab/Software_Testing/WBF-Software-Testing
+plugins: cov-7.1.0
+collecting ... collected 1 item
+
+manual_tests/test_wbf_22.py::test_case {"case_id": "WBF-22", "warnings": [], "exception": null, "exception_message": null, "boxes": [[0.11538462340831757, 0.10000000894069672, 0.5153846144676208, 0.4999999701976776]], "scores": [0.8666666348775228], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+PASSED
+
+============================== 1 passed in 0.25s ===============================

@@ -1,0 +1,39 @@
+{
+  "case_id": "WBF-24",
+  "title": "框与类别数量不一致异常",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          0.1,
+          0.1,
+          0.5,
+          0.5
+        ]
+      ]
+    ],
+    "scores_list": [
+      [
+        0.9
+      ]
+    ],
+    "labels_list": [
+      []
+    ],
+    "weights": [
+      1
+    ],
+    "iou_thr": 0.55,
+    "skip_box_thr": 0.0,
+    "conf_type": "avg",
+    "allows_overflow": false
+  },
+  "expected": {
+    "boxes": null,
+    "scores": null,
+    "labels": null,
+    "warnings": [],
+    "contract": "value_error"
+  },
+  "basis": "建议接口契约：无效输入应抛出可由调用方处理的ValueError，不能直接终止宿主进程。此契约尚待评审，实际退出行为单独记录。"
+}
