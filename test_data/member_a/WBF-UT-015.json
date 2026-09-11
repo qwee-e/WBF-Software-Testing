@@ -1,0 +1,50 @@
+{
+  "id": "WBF-UT-015",
+  "title": "y1 > y2，纵向端点反向",
+  "source_input": "boxes=[[[0.1,0.6,0.5,0.2]]]; scores=[[0.9]]; labels=[[1]]; weights=[1]",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          0.1,
+          0.6,
+          0.5,
+          0.2
+        ]
+      ]
+    ],
+    "scores_list": [
+      [
+        0.9
+      ]
+    ],
+    "labels_list": [
+      [
+        1
+      ]
+    ],
+    "weights": [
+      1
+    ]
+  },
+  "expected": {
+    "boxes": [
+      [
+        0.1,
+        0.2,
+        0.5,
+        0.6
+      ]
+    ],
+    "scores": [
+      0.9
+    ],
+    "labels": [
+      1
+    ]
+  },
+  "method": "异常等价类：纵向端点反向",
+  "expected_description": "交换y端点后返回[0.1,0.2,0.5,0.6]，分数0.9，类别1；发出UserWarning，含Y2 < Y1。",
+  "notes": "沿用原接口的修正约定，不将有警告误判为测试失败。",
+  "procedure": "1. 载入test_data/member_a/WBF-UT-015.json输入。2. 使用成功复现虚拟环境运行对应pytest用例。3. 捕获返回值、形状、警告及异常，与执行前的独立预期核对。4. 保存批次日志/JSON并回填结果。"
+}

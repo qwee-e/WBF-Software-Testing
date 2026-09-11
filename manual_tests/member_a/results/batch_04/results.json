@@ -1,0 +1,159 @@
+{
+  "executed_at": "2026-09-11T09:34:27.731564+08:00",
+  "python": "3.10.16",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "numpy": "1.23.5",
+  "pytest": "9.0.3",
+  "source_commit": "92ac4de7b79a33a81353ed8fbdadc394a45d106b",
+  "source_path": "ensemble_boxes/ensemble_boxes_wbf.py",
+  "source_sha256": "a9663b421bc3adf4c42d74ccb572d1e2e149ee2a1c5aab2a6e88eec46c6b13b9",
+  "matches_reproduction_success": true,
+  "pytest_exit_code": 0,
+  "results": [
+    {
+      "case_id": "WBF-UT-013",
+      "nodeid": "manual_tests/member_a/test_wbf_member_a.py::test_013__coordinate_endpoints_zero_one",
+      "phase": "call",
+      "status": "OK",
+      "duration_seconds": 0.008531500119715929,
+      "calls": [
+        {
+          "scenario": "spreadsheet_input",
+          "input": {
+            "boxes_list": [
+              [
+                [
+                  0,
+                  0,
+                  1,
+                  1
+                ]
+              ]
+            ],
+            "scores_list": [
+              [
+                0.9
+              ]
+            ],
+            "labels_list": [
+              [
+                1
+              ]
+            ],
+            "weights": [
+              1
+            ]
+          },
+          "output": {
+            "boxes": [
+              [
+                0.0,
+                0.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "scores": [
+              0.9
+            ],
+            "labels": [
+              1.0
+            ]
+          },
+          "shapes": [
+            [
+              1,
+              4
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ]
+          ],
+          "exception": null,
+          "warnings": [],
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-015",
+      "nodeid": "manual_tests/member_a/test_wbf_member_a.py::test_015__reversed_y_coordinates",
+      "phase": "call",
+      "status": "OK",
+      "duration_seconds": 0.006355199962854385,
+      "calls": [
+        {
+          "scenario": "spreadsheet_input",
+          "input": {
+            "boxes_list": [
+              [
+                [
+                  0.1,
+                  0.6,
+                  0.5,
+                  0.2
+                ]
+              ]
+            ],
+            "scores_list": [
+              [
+                0.9
+              ]
+            ],
+            "labels_list": [
+              [
+                1
+              ]
+            ],
+            "weights": [
+              1
+            ]
+          },
+          "output": {
+            "boxes": [
+              [
+                0.1,
+                0.2,
+                0.5,
+                0.6
+              ]
+            ],
+            "scores": [
+              0.9
+            ],
+            "labels": [
+              1.0
+            ]
+          },
+          "shapes": [
+            [
+              1,
+              4
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ]
+          ],
+          "exception": null,
+          "warnings": [
+            {
+              "category": "UserWarning",
+              "message": "Y2 < Y1 value in box. Swap them."
+            }
+          ],
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "failure": null
+    }
+  ]
+}

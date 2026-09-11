@@ -1,0 +1,14 @@
+Command: E:\WBF\WBF-Software-Testing-main\.venv\Scripts\python.exe -m pytest manual_tests/member_a/test_wbf_member_a.py -v --tb=short -k "test_013__ or test_015__" --member-a-report=E:\WBF\WBF-Software-Testing-main\manual_tests\member_a\results\batch_04\results.json
+
+============================= test session starts =============================
+platform win32 -- Python 3.10.16, pytest-9.0.3, pluggy-1.6.0 -- E:\WBF\WBF-Software-Testing-main\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: E:\WBF\WBF-Software-Testing-main
+collecting ... collected 8 items / 6 deselected / 2 selected
+
+manual_tests/member_a/test_wbf_member_a.py::test_013__coordinate_endpoints_zero_one PASSED [ 50%]
+manual_tests/member_a/test_wbf_member_a.py::test_015__reversed_y_coordinates PASSED [100%]
+
+======================= 2 passed, 6 deselected in 0.22s =======================
+
+Exit code: 0

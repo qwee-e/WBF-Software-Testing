@@ -67,3 +67,13 @@ def test_009__iou_threshold_one(probe):
 def test_011__score_below_filter(probe):
     spec = case(11)
     assert_output(probe, spec["input"], spec["expected"])
+
+
+def test_013__coordinate_endpoints_zero_one(probe):
+    spec = case(13)
+    assert_output(probe, spec["input"], spec["expected"])
+
+
+def test_015__reversed_y_coordinates(probe):
+    spec = case(15)
+    assert_output(probe, spec["input"], spec["expected"], warning="Y2 < Y1")

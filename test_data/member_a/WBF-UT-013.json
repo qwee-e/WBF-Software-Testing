@@ -1,0 +1,50 @@
+{
+  "id": "WBF-UT-013",
+  "title": "框坐标恰好覆盖0和1",
+  "source_input": "boxes=[[[0,0,1,1]]]; scores=[[0.9]]; labels=[[1]]; weights=[1]",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          0,
+          0,
+          1,
+          1
+        ]
+      ]
+    ],
+    "scores_list": [
+      [
+        0.9
+      ]
+    ],
+    "labels_list": [
+      [
+        1
+      ]
+    ],
+    "weights": [
+      1
+    ]
+  },
+  "expected": {
+    "boxes": [
+      [
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "scores": [
+      0.9
+    ],
+    "labels": [
+      1
+    ]
+  },
+  "method": "边界值：合法坐标0与1",
+  "expected_description": "返回1框[0,0,1,1]，分数0.9，类别1；不裁剪、不警告。",
+  "notes": "闭区间端点0和1合法，面积为1。",
+  "procedure": "1. 载入test_data/member_a/WBF-UT-013.json输入。2. 使用成功复现虚拟环境运行对应pytest用例。3. 捕获返回值、形状、警告及异常，与执行前的独立预期核对。4. 保存批次日志/JSON并回填结果。"
+}
