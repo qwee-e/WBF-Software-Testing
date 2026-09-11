@@ -1,0 +1,56 @@
+{
+  "case_id": "WBF-28",
+  "title": "全零模型权重异常",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          0.1,
+          0.1,
+          0.5,
+          0.5
+        ]
+      ],
+      [
+        [
+          0.1,
+          0.1,
+          0.5,
+          0.5
+        ]
+      ]
+    ],
+    "scores_list": [
+      [
+        0.9
+      ],
+      [
+        0.9
+      ]
+    ],
+    "labels_list": [
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "weights": [
+      0,
+      0
+    ],
+    "iou_thr": 0.55,
+    "skip_box_thr": 0.0,
+    "conf_type": "avg",
+    "allows_overflow": false
+  },
+  "expected": {
+    "boxes": null,
+    "scores": null,
+    "labels": null,
+    "warnings": [],
+    "contract": "value_error"
+  },
+  "basis": "权重和为0，归一化无定义；本测试采用明确抛出ValueError的建议契约，待评审。不得静默返回NaN或Inf。"
+}

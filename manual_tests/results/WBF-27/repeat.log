@@ -1,0 +1,52 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0 -- /opt/miniconda3/envs/wbf-test/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/rab/Software_Testing/WBF-Software-Testing
+plugins: cov-7.1.0
+collecting ... collected 1 item
+
+manual_tests/test_wbf_27.py::test_case {"case_id": "WBF-27", "warnings": [], "exception": null, "exception_message": null, "boxes": [[0.10000000149011612, 0.10000000149011612, 0.5, 0.5]], "scores": [1.1999999682108562], "labels": [1.0], "shapes": [[1, 4], [1], [1]]}
+FAILED
+
+=================================== FAILURES ===================================
+__________________________________ test_case ___________________________________
+
+    def test_case():
+        case = json.loads((Path(__file__).resolve().parents[1] / "test_data" / "WBF-27.json").read_text())
+        expected = case["expected"]
+        error = None
+        result = None
+        with warnings.catch_warnings(record=True) as caught:
+            warnings.simplefilter("always")
+            try:
+                result = weighted_boxes_fusion(**case["input"])
+            except (Exception, SystemExit) as exc:
+                error = exc
+        observation = {"case_id": case["case_id"], "warnings": [str(w.message) for w in caught],
+                       "exception": None if error is None else type(error).__name__,
+                       "exception_message": None if error is None else str(error)}
+        if result is not None:
+            observation.update(zip(("boxes", "scores", "labels"), [a.tolist() for a in result]))
+            observation["shapes"] = [list(a.shape) for a in result]
+        print(json.dumps(observation, ensure_ascii=False))
+        if expected["contract"] == "value_error":
+            assert isinstance(error, ValueError), f"Expected ValueError; observed {observation}"
+            return
+        assert error is None, observation
+        boxes, scores, labels = result
+        assert all(np.isfinite(a).all() for a in result), observation
+        if expected["contract"] == "bounded":
+            assert boxes.shape == (1, 4)
+            np.testing.assert_allclose(boxes, [[.1, .1, .5, .5]], rtol=0, atol=1e-6)
+            np.testing.assert_array_equal(labels, [1])
+            assert scores.shape == (1,)
+>           assert ((scores >= 0) & (scores <= 1)).all(), observation
+E           AssertionError: {'case_id': 'WBF-27', 'warnings': [], 'exception': None, 'exception_message': None, ...}
+E           assert np.False_
+E            +  where np.False_ = <built-in method all of numpy.ndarray object at 0x107a8e6d0>()
+E            +    where <built-in method all of numpy.ndarray object at 0x107a8e6d0> = (array([1.19999997]) >= 0 & array([1.19999997]) <= 1).all
+
+manual_tests/test_wbf_27.py:38: AssertionError
+=========================== short test summary info ============================
+FAILED manual_tests/test_wbf_27.py::test_case - AssertionError: {'case_id': '...
+============================== 1 failed in 0.13s ===============================

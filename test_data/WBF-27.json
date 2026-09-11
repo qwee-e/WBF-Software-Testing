@@ -1,0 +1,53 @@
+{
+  "case_id": "WBF-27",
+  "title": "禁止溢出时分数上界",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          0.1,
+          0.1,
+          0.5,
+          0.5
+        ],
+        [
+          0.1,
+          0.1,
+          0.5,
+          0.5
+        ]
+      ],
+      []
+    ],
+    "scores_list": [
+      [
+        0.9,
+        0.9
+      ],
+      []
+    ],
+    "labels_list": [
+      [
+        1,
+        1
+      ],
+      []
+    ],
+    "weights": [
+      2,
+      1
+    ],
+    "iou_thr": 0.55,
+    "skip_box_thr": 0.0,
+    "conf_type": "avg",
+    "allows_overflow": false
+  },
+  "expected": {
+    "boxes": null,
+    "scores": null,
+    "labels": null,
+    "warnings": [],
+    "contract": "bounded"
+  },
+  "basis": "allows_overflow参数文档明确False时分数不超过1；输入分数0.9合法，因此所有输出应有限且在[0,1]内。"
+}
