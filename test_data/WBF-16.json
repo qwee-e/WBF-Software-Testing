@@ -1,0 +1,55 @@
+{
+  "case_id": "WBF-16",
+  "title": "负坐标裁剪",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          -0.1,
+          -0.2,
+          0.5,
+          0.5
+        ]
+      ]
+    ],
+    "scores_list": [
+      [
+        0.9
+      ]
+    ],
+    "labels_list": [
+      [
+        1
+      ]
+    ],
+    "weights": [
+      1
+    ],
+    "iou_thr": 0.55,
+    "skip_box_thr": 0.0,
+    "conf_type": "avg",
+    "allows_overflow": false
+  },
+  "expected": {
+    "boxes": [
+      [
+        0,
+        0,
+        0.5,
+        0.5
+      ]
+    ],
+    "scores": [
+      0.9
+    ],
+    "labels": [
+      1
+    ],
+    "warnings": [
+      "X1 < 0 in box. Set it to 0.",
+      "Y1 < 0 in box. Set it to 0."
+    ],
+    "contract": null
+  },
+  "basis": "x1和y1小于0，分别裁剪为0并告警，修正后仍为正面积框。"
+}

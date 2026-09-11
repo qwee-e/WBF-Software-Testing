@@ -1,0 +1,54 @@
+{
+  "case_id": "WBF-14",
+  "title": "横向端点反向修正",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          0.5,
+          0.1,
+          0.1,
+          0.5
+        ]
+      ]
+    ],
+    "scores_list": [
+      [
+        0.9
+      ]
+    ],
+    "labels_list": [
+      [
+        1
+      ]
+    ],
+    "weights": [
+      1
+    ],
+    "iou_thr": 0.55,
+    "skip_box_thr": 0.0,
+    "conf_type": "avg",
+    "allows_overflow": false
+  },
+  "expected": {
+    "boxes": [
+      [
+        0.1,
+        0.1,
+        0.5,
+        0.5
+      ]
+    ],
+    "scores": [
+      0.9
+    ],
+    "labels": [
+      1
+    ],
+    "warnings": [
+      "X2 < X1 value in box. Swap them."
+    ],
+    "contract": null
+  },
+  "basis": "横向端点交换后为[0.1,0.1,0.5,0.5]，分数与类别不变，应告警。"
+}
