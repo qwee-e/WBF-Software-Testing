@@ -1,0 +1,438 @@
+{
+  "executed_at": "2026-09-11T09:33:18.234915+08:00",
+  "python": "3.10.16",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "numpy": "1.23.5",
+  "pytest": "9.0.3",
+  "source_commit": "fe56ca815668aa0bf985e9ba317905484128cd4f",
+  "source_path": "ensemble_boxes/ensemble_boxes_wbf.py",
+  "source_sha256": "a9663b421bc3adf4c42d74ccb572d1e2e149ee2a1c5aab2a6e88eec46c6b13b9",
+  "matches_reproduction_success": true,
+  "pytest_exit_code": 0,
+  "results": [
+    {
+      "case_id": "WBF-UT-005",
+      "nodeid": "manual_tests/member_a/test_wbf_member_a.py::test_005__overlap_above_threshold",
+      "phase": "call",
+      "status": "OK",
+      "duration_seconds": 0.010124699911102653,
+      "calls": [
+        {
+          "scenario": "spreadsheet_input",
+          "input": {
+            "boxes_list": [
+              [
+                [
+                  0.1,
+                  0.1,
+                  0.5,
+                  0.5
+                ]
+              ],
+              [
+                [
+                  0.12,
+                  0.12,
+                  0.52,
+                  0.52
+                ]
+              ]
+            ],
+            "scores_list": [
+              [
+                0.9
+              ],
+              [
+                0.8
+              ]
+            ],
+            "labels_list": [
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "weights": [
+              1,
+              1
+            ],
+            "iou_thr": 0.55
+          },
+          "output": {
+            "boxes": [
+              [
+                0.10941176116466522,
+                0.10941176116466522,
+                0.5094117522239685,
+                0.5094117522239685
+              ]
+            ],
+            "scores": [
+              0.8500000238418579
+            ],
+            "labels": [
+              1.0
+            ]
+          },
+          "shapes": [
+            [
+              1,
+              4
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ]
+          ],
+          "exception": null,
+          "warnings": [],
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-007",
+      "nodeid": "manual_tests/member_a/test_wbf_member_a.py::test_007__exact_iou_boundary_and_neighbors",
+      "phase": "call",
+      "status": "OK",
+      "duration_seconds": 0.0016626999713480473,
+      "calls": [
+        {
+          "scenario": "spreadsheet_input",
+          "input": {
+            "boxes_list": [
+              [
+                [
+                  0.1,
+                  0.1,
+                  0.5,
+                  0.5
+                ]
+              ],
+              [
+                [
+                  0.2161290323,
+                  0.1,
+                  0.6161290323,
+                  0.5
+                ]
+              ]
+            ],
+            "scores_list": [
+              [
+                0.9
+              ],
+              [
+                0.8
+              ]
+            ],
+            "labels_list": [
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "weights": [
+              1,
+              1
+            ],
+            "iou_thr": 0.55
+          },
+          "output": {
+            "boxes": [
+              [
+                0.1,
+                0.1,
+                0.5,
+                0.5
+              ],
+              [
+                0.2161290323,
+                0.1,
+                0.6161290323,
+                0.5
+              ]
+            ],
+            "scores": [
+              0.45,
+              0.4
+            ],
+            "labels": [
+              1.0,
+              1.0
+            ]
+          },
+          "shapes": [
+            [
+              2,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              2
+            ]
+          ],
+          "exception": null,
+          "warnings": [],
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "scenario": "exact_iou_equals_threshold",
+          "input": {
+            "boxes_list": [
+              [
+                [
+                  0,
+                  0,
+                  0.75,
+                  1
+                ]
+              ],
+              [
+                [
+                  0.25,
+                  0,
+                  1,
+                  1
+                ]
+              ]
+            ],
+            "scores_list": [
+              [
+                0.9
+              ],
+              [
+                0.8
+              ]
+            ],
+            "labels_list": [
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "weights": [
+              1,
+              1
+            ],
+            "iou_thr": 0.5
+          },
+          "output": {
+            "boxes": [
+              [
+                0.0,
+                0.0,
+                0.75,
+                1.0
+              ],
+              [
+                0.25,
+                0.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "scores": [
+              0.45,
+              0.4
+            ],
+            "labels": [
+              1.0,
+              1.0
+            ]
+          },
+          "shapes": [
+            [
+              2,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              2
+            ]
+          ],
+          "exception": null,
+          "warnings": [],
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "scenario": "threshold_one_float_below_iou",
+          "input": {
+            "boxes_list": [
+              [
+                [
+                  0,
+                  0,
+                  0.75,
+                  1
+                ]
+              ],
+              [
+                [
+                  0.25,
+                  0,
+                  1,
+                  1
+                ]
+              ]
+            ],
+            "scores_list": [
+              [
+                0.9
+              ],
+              [
+                0.8
+              ]
+            ],
+            "labels_list": [
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "weights": [
+              1,
+              1
+            ],
+            "iou_thr": 0.49999999999999994
+          },
+          "output": {
+            "boxes": [
+              [
+                0.11764705926179886,
+                0.0,
+                0.8676470518112183,
+                0.9999999403953552
+              ]
+            ],
+            "scores": [
+              0.8500000238418579
+            ],
+            "labels": [
+              1.0
+            ]
+          },
+          "shapes": [
+            [
+              1,
+              4
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ]
+          ],
+          "exception": null,
+          "warnings": [],
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "scenario": "threshold_one_float_above_iou",
+          "input": {
+            "boxes_list": [
+              [
+                [
+                  0,
+                  0,
+                  0.75,
+                  1
+                ]
+              ],
+              [
+                [
+                  0.25,
+                  0,
+                  1,
+                  1
+                ]
+              ]
+            ],
+            "scores_list": [
+              [
+                0.9
+              ],
+              [
+                0.8
+              ]
+            ],
+            "labels_list": [
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "weights": [
+              1,
+              1
+            ],
+            "iou_thr": 0.5000000000000001
+          },
+          "output": {
+            "boxes": [
+              [
+                0.0,
+                0.0,
+                0.75,
+                1.0
+              ],
+              [
+                0.25,
+                0.0,
+                1.0,
+                1.0
+              ]
+            ],
+            "scores": [
+              0.45,
+              0.4
+            ],
+            "labels": [
+              1.0,
+              1.0
+            ]
+          },
+          "shapes": [
+            [
+              2,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              2
+            ]
+          ],
+          "exception": null,
+          "warnings": [],
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "failure": null
+    }
+  ]
+}

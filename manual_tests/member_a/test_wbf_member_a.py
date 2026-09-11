@@ -38,3 +38,22 @@ def test_001__single_valid_box(probe):
 def test_003__disjoint_same_class(probe):
     spec = case(3)
     assert_output(probe, spec["input"], spec["expected"])
+
+
+def test_005__overlap_above_threshold(probe):
+    spec = case(5)
+    assert_output(probe, spec["input"], spec["expected"])
+
+
+def test_007__exact_iou_boundary_and_neighbors(probe):
+    spec = case(7)
+    # Retain the supplied rounded coordinates; they are just below 0.55.
+    assert_output(probe, spec["input"], spec["expected"])
+    # Supplemental boxes have intersection 0.5, union 1: IoU exactly 0.5.
+    for threshold, expected, name in (
+        (0.5, spec["supplemental_unfused"], "exact_iou_equals_threshold"),
+        (float(np.nextafter(0.5, 0.0)), spec["supplemental_fused"], "threshold_one_float_below_iou"),
+        (float(np.nextafter(0.5, 1.0)), spec["supplemental_unfused"], "threshold_one_float_above_iou"),
+    ):
+        params = dict(spec["supplemental_input"], iou_thr=threshold)
+        assert_output(probe, params, expected, name)
