@@ -26,7 +26,7 @@ def gen_color_list(model_num, labels_num):
 
 def show_boxes(boxes_list, scores_list, labels_list, image_size=800):
     thickness = 5
-    color_list = gen_color_list(len(boxes_list), len(np.unique(labels_list)))
+    color_list = gen_color_list(len(boxes_list), len(np.unique([label for labels in labels_list for label in labels])))
     image = np.zeros((image_size, image_size, 3), dtype=np.uint8)
     image[...] = 255
     for i in range(len(boxes_list)):

@@ -26,3 +26,50 @@ WBF-Software-Testing/
 冻结标签为 `reproduction-success`。运行环境及恢复方法见 [基线说明](lry_reproduction/original_reproduction/BASELINE.md)。成功复现使用 NumPy 1.23.5，重建环境应使用记录的兼容依赖快照。
 
 原示例与官方测试的成功运行属于基线复现，不属于自行设计的测试成果。
+
+## 本次 WBF 基线复现
+
+已在已有的 `wbf-test` Conda 环境中验证：现有 6 项测试全部通过，6 个示例全部运行成功，生成 12 张处理前后的图片。本次属于原项目基线复现，未运行数据集基准实验，也不作为自主设计的测试成果。
+
+与此前保存的结果比较，6 份示例文本和 12 张图片逐字节一致，只有环境记录及测试耗时不同，无需为查看结果重复运行。
+
+### 当前环境
+
+使用 Python 3.11.15、NumPy 2.4.6、Numba 0.67.0、Matplotlib 3.9.4、opencv-python 4.11.0.86、pandas 3.0.5、pytest 9.1.1。已补齐 Matplotlib 和 OpenCV，保留其他已有依赖，临时 `.venv` 已删除。
+
+当前环境与 `requirements.txt` 中的固定版本、上述冻结基线环境有所不同。各次运行的实际版本以对应的 `environment.txt` 为准，无需在已有环境中重新安装固定版本依赖。
+
+### 结果文件
+
+- `zjw_replicate_test/`：本次提交保存的首次复现结果，环境记录对应首次运行。
+- `artifacts/`：`reproduce.py` 的实际输出目录，本地保存了 `wbf-test` 的验证结果，已被 Git 忽略。
+- `tests.txt`：pytest 结果；`environment.txt`：Python 与直接依赖版本。
+- 各示例 `.txt`：控制台输出；`*_before.png`、`*_after.png`：处理前后图片。
+
+可查看 [测试结果](zjw_replicate_test/tests.txt)、[二维 WBF 输出](zjw_replicate_test/wbf_2d_two_models.txt) 和 [融合后图片](zjw_replicate_test/wbf_2d_two_models_after.png)。
+
+### 运行方式
+
+在项目根目录执行：
+
+```bash
+conda activate wbf-test
+python reproduce.py
+```
+
+脚本先运行现有测试，通过后按原示例入口参数运行二维 WBF（单模型、双模型）、NMS、Soft-NMS、一维 WBF 和三维 WBF。绘图保存为 PNG，重新运行会覆盖 `artifacts/` 中同名文件。
+
+仅运行测试：
+
+```bash
+conda activate wbf-test
+python -m pytest -q
+```
+
+交互式绘图可在激活环境后运行 `python -m examples.example`、`python -m examples.example_1d` 或 `python -m examples.example_3d`。OpenCV 窗口按键后继续；三维示例使用 Matplotlib 窗口。IDE 中请选择 `wbf-test` 解释器。
+
+### 修改说明
+
+- 新增 `reproduce.py`，统一运行测试与示例，保存环境、日志和图片。
+- 修复二维示例对不等长标签列表直接调用 `np.unique` 导致的 NumPy 2 报错：先展平标签再统计类别，仅修改绘图辅助代码，算法实现不变。
+- 补充忽略规则，排除虚拟环境、缓存和本地生成结果。
