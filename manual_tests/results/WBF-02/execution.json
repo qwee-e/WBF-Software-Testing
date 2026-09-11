@@ -1,0 +1,17 @@
+{
+  "executed_at": "2026-09-11T09:38:53.493007+08:00",
+  "code_commit": "07d7b677b6fd903c7ea6309c0b92fdc4cd7833a5",
+  "source_sha256": "a9663b421bc3adf4c42d74ccb572d1e2e149ee2a1c5aab2a6e88eec46c6b13b9",
+  "test_sha256": "b39d569c79aa2303565a2ea05721209cd061aa1b7fd88d500875cef2aa512ced",
+  "python": "3.11.15 (main, Jun 11 2026, 15:14:57) [Clang 20.1.8 ]",
+  "executable": "/opt/miniconda3/envs/wbf-test/bin/python",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "numba": "0.67.0",
+    "pandas": "3.0.5",
+    "pytest": "9.1.1"
+  },
+  "command": "python -m pytest manual_tests/test_wbf_02.py -v -s",
+  "exit_code": 0,
+  "status": "PASS"
+}

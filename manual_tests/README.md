@@ -8,3 +8,5 @@
 - 官方自带测试保留在 `../tests/`；原项目复现材料保留在 `../lry_reproduction/`，不计作人工设计的测试成果。
 
 成员一用例及执行方式见 [member_a/README.md](member_a/README.md)；实际进度以 [执行记录](../docs/member_a/执行记录.md) 为准。
+
+测试 02（双模型完全相同且同类别的框）已执行通过，设计、手算预期与执行证据见 [WBF-02.md](WBF-02.md)，脚本为 `test_wbf_02.py`。该用例采用 AI 辅助编写与执行，需本人复核。
