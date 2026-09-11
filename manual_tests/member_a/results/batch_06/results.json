@@ -1,0 +1,229 @@
+{
+  "executed_at": "2026-09-11T09:35:40.300244+08:00",
+  "python": "3.10.16",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "numpy": "1.23.5",
+  "pytest": "9.0.3",
+  "source_commit": "c2f65e6fa4b2976f4621d020a885cca49234ba2e",
+  "source_path": "ensemble_boxes/ensemble_boxes_wbf.py",
+  "source_sha256": "a9663b421bc3adf4c42d74ccb572d1e2e149ee2a1c5aab2a6e88eec46c6b13b9",
+  "matches_reproduction_success": true,
+  "pytest_exit_code": 1,
+  "results": [
+    {
+      "case_id": "WBF-UT-021",
+      "nodeid": "manual_tests/member_a/test_wbf_member_a.py::test_021__default_weights_equal_explicit_ones",
+      "phase": "call",
+      "status": "OK",
+      "duration_seconds": 0.009059900185093284,
+      "calls": [
+        {
+          "scenario": "spreadsheet_input",
+          "input": {
+            "boxes_list": [
+              [
+                [
+                  0.1,
+                  0.1,
+                  0.5,
+                  0.5
+                ]
+              ],
+              [
+                [
+                  0.1,
+                  0.1,
+                  0.5,
+                  0.5
+                ]
+              ]
+            ],
+            "scores_list": [
+              [
+                0.9
+              ],
+              [
+                0.8
+              ]
+            ],
+            "labels_list": [
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "weights": null,
+            "conf_type": "avg"
+          },
+          "output": {
+            "boxes": [
+              [
+                0.10000000149011612,
+                0.10000000149011612,
+                0.4999999701976776,
+                0.4999999701976776
+              ]
+            ],
+            "scores": [
+              0.8500000238418579
+            ],
+            "labels": [
+              1.0
+            ]
+          },
+          "shapes": [
+            [
+              1,
+              4
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ]
+          ],
+          "exception": null,
+          "warnings": [],
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "scenario": "explicit_unit_weights",
+          "input": {
+            "boxes_list": [
+              [
+                [
+                  0.1,
+                  0.1,
+                  0.5,
+                  0.5
+                ]
+              ],
+              [
+                [
+                  0.1,
+                  0.1,
+                  0.5,
+                  0.5
+                ]
+              ]
+            ],
+            "scores_list": [
+              [
+                0.9
+              ],
+              [
+                0.8
+              ]
+            ],
+            "labels_list": [
+              [
+                1
+              ],
+              [
+                1
+              ]
+            ],
+            "weights": [
+              1,
+              1
+            ],
+            "conf_type": "avg"
+          },
+          "output": {
+            "boxes": [
+              [
+                0.10000000149011612,
+                0.10000000149011612,
+                0.4999999701976776,
+                0.4999999701976776
+              ]
+            ],
+            "scores": [
+              0.8500000238418579
+            ],
+            "labels": [
+              1.0
+            ]
+          },
+          "shapes": [
+            [
+              1,
+              4
+            ],
+            [
+              1
+            ],
+            [
+              1
+            ]
+          ],
+          "exception": null,
+          "warnings": [],
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "failure": null
+    },
+    {
+      "case_id": "WBF-UT-023",
+      "nodeid": "manual_tests/member_a/test_wbf_member_a.py::test_023__mismatched_scores_raise_value_error",
+      "phase": "call",
+      "status": "NG",
+      "duration_seconds": 0.009330200031399727,
+      "calls": [
+        {
+          "scenario": "spreadsheet_input",
+          "input": {
+            "boxes_list": [
+              [
+                [
+                  0.1,
+                  0.1,
+                  0.3,
+                  0.3
+                ],
+                [
+                  0.4,
+                  0.4,
+                  0.6,
+                  0.6
+                ]
+              ]
+            ],
+            "scores_list": [
+              [
+                0.9
+              ]
+            ],
+            "labels_list": [
+              [
+                1,
+                1
+              ]
+            ],
+            "weights": [
+              1
+            ]
+          },
+          "output": null,
+          "shapes": null,
+          "exception": {
+            "type": "SystemExit",
+            "message": "None",
+            "exit_code": null,
+            "traceback": "Traceback (most recent call last):\n  File \"E:\\WBF\\WBF-Software-Testing-main\\manual_tests\\member_a\\conftest.py\", line 51, in invoke\n    result = weighted_boxes_fusion(**params)\n  File \"E:\\WBF\\WBF-Software-Testing-main\\ensemble_boxes\\ensemble_boxes_wbf.py\", line 195, in weighted_boxes_fusion\n    filtered_boxes = prefilter_boxes(boxes_list, scores_list, labels_list, weights, skip_box_thr)\n  File \"E:\\WBF\\WBF-Software-Testing-main\\ensemble_boxes\\ensemble_boxes_wbf.py\", line 17, in prefilter_boxes\n    exit()\n  File \"D:\\anaconda\\lib\\_sitebuiltins.py\", line 26, in __call__\n    raise SystemExit(code)\nSystemExit: None\n"
+          },
+          "warnings": [],
+          "stdout": "Error. Length of boxes arrays not equal to length of scores array: 2 != 1\n",
+          "stderr": ""
+        }
+      ],
+      "failure": "manual_tests\\member_a\\test_wbf_member_a.py:103: in test_023__mismatched_scores_raise_value_error\n    assert isinstance(error, ValueError), (\nE   AssertionError: Proposed robustness contract requires ValueError, got SystemExit; stdout='Error. Length of boxes arrays not equal to length of scores array: 2 != 1\\n'\nE   assert False\nE    +  where False = isinstance(SystemExit(None), ValueError)"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+Command: E:\WBF\WBF-Software-Testing-main\.venv\Scripts\python.exe -m pytest manual_tests/member_a/test_wbf_member_a.py -v --tb=short -k "test_021__ or test_023__" --member-a-report=E:\WBF\WBF-Software-Testing-main\manual_tests\member_a\results\batch_06\results.json
+
+============================= test session starts =============================
+platform win32 -- Python 3.10.16, pytest-9.0.3, pluggy-1.6.0 -- E:\WBF\WBF-Software-Testing-main\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: E:\WBF\WBF-Software-Testing-main
+collecting ... collected 12 items / 10 deselected / 2 selected
+
+manual_tests/member_a/test_wbf_member_a.py::test_021__default_weights_equal_explicit_ones PASSED [ 50%]
+manual_tests/member_a/test_wbf_member_a.py::test_023__mismatched_scores_raise_value_error FAILED [100%]
+
+================================== FAILURES ===================================
+________________ test_023__mismatched_scores_raise_value_error ________________
+manual_tests\member_a\test_wbf_member_a.py:103: in test_023__mismatched_scores_raise_value_error
+    assert isinstance(error, ValueError), (
+E   AssertionError: Proposed robustness contract requires ValueError, got SystemExit; stdout='Error. Length of boxes arrays not equal to length of scores array: 2 != 1\n'
+E   assert False
+E    +  where False = isinstance(SystemExit(None), ValueError)
+=========================== short test summary info ===========================
+FAILED manual_tests/member_a/test_wbf_member_a.py::test_023__mismatched_scores_raise_value_error
+================= 1 failed, 1 passed, 10 deselected in 0.38s ==================
+
+Exit code: 1

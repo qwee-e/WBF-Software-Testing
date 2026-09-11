@@ -1,0 +1,44 @@
+{
+  "id": "WBF-UT-023",
+  "title": "某模型boxes数量与scores数量不一致",
+  "source_input": "boxes=[[[0.1,0.1,0.3,0.3],[0.4,0.4,0.6,0.6]]]; scores=[[0.9]]; labels=[[1,1]]; weights=[1]",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          0.1,
+          0.1,
+          0.3,
+          0.3
+        ],
+        [
+          0.4,
+          0.4,
+          0.6,
+          0.6
+        ]
+      ]
+    ],
+    "scores_list": [
+      [
+        0.9
+      ]
+    ],
+    "labels_list": [
+      [
+        1,
+        1
+      ]
+    ],
+    "weights": [
+      1
+    ]
+  },
+  "expected": {
+    "exception": "ValueError"
+  },
+  "method": "健壮性：内部框/分数数量不一致",
+  "expected_description": "建议契约：显式抛出ValueError且说明数量不一致，调用者可正常捕获；不能用SystemExit退出进程。",
+  "notes": "ValueError属于本次建议的健壮性要求，原源码未承诺该异常类型；真实行为单独记录，缺陷定性待评审。",
+  "procedure": "1. 载入test_data/member_a/WBF-UT-023.json输入。2. 使用成功复现虚拟环境运行对应pytest用例。3. 捕获返回值、形状、警告及异常，与执行前的独立预期核对。4. 保存批次日志/JSON并回填结果。"
+}

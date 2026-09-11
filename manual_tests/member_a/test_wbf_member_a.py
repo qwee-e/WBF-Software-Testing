@@ -87,3 +87,22 @@ def test_017__coordinate_above_one(probe):
 def test_019__empty_model_list(probe):
     spec = case(19)
     assert_output(probe, spec["input"], spec["expected"])
+
+
+def test_021__default_weights_equal_explicit_ones(probe):
+    spec = case(21)
+    default = assert_output(probe, spec["input"], spec["expected"])
+    explicit = assert_output(probe, dict(spec["input"], weights=[1, 1]), spec["expected"], "explicit_unit_weights")
+    for actual, reference in zip(default, explicit):
+        np.testing.assert_allclose(actual, reference, rtol=1e-6, atol=1e-7)
+
+
+def test_023__mismatched_scores_raise_value_error(probe):
+    spec = case(23)
+    result, error, record = probe(spec["input"])
+    assert isinstance(error, ValueError), (
+        f"Proposed robustness contract requires ValueError, got {type(error).__name__}; "
+        f"stdout={record['stdout']!r}"
+    )
+    assert str(error), "Validation error should explain the mismatch"
+    assert result is None

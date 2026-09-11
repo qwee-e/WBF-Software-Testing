@@ -1,0 +1,63 @@
+{
+  "id": "WBF-UT-021",
+  "title": "weights = None",
+  "source_input": "boxes=[[[0.1,0.1,0.5,0.5]],[[0.1,0.1,0.5,0.5]]]; scores=[[0.9],[0.8]]; labels=[[1],[1]]; weights=None; conf_type='avg'",
+  "input": {
+    "boxes_list": [
+      [
+        [
+          0.1,
+          0.1,
+          0.5,
+          0.5
+        ]
+      ],
+      [
+        [
+          0.1,
+          0.1,
+          0.5,
+          0.5
+        ]
+      ]
+    ],
+    "scores_list": [
+      [
+        0.9
+      ],
+      [
+        0.8
+      ]
+    ],
+    "labels_list": [
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "weights": null,
+    "conf_type": "avg"
+  },
+  "expected": {
+    "boxes": [
+      [
+        0.1,
+        0.1,
+        0.5,
+        0.5
+      ]
+    ],
+    "scores": [
+      0.85
+    ],
+    "labels": [
+      1
+    ]
+  },
+  "method": "默认值与变形关系：None等价于全1权重",
+  "expected_description": "weights=None与weights=[1,1]都返回1个相同坐标框，分数0.85、类别1；两次输出一致。",
+  "notes": "同时与独立手算值核对，避免仅比较两次同错结果。",
+  "procedure": "1. 载入test_data/member_a/WBF-UT-021.json输入。2. 使用成功复现虚拟环境运行对应pytest用例。3. 捕获返回值、形状、警告及异常，与执行前的独立预期核对。4. 保存批次日志/JSON并回填结果。"
+}
