@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.101" timestamp="2026-09-18T09:22:15.513157+08:00" hostname="RabdeMacBook-Air.local"><testcase classname="ai_tests.test_ai_wbf_012" name="test_small_positive_score_stability" time="0.092" /></testsuite></testsuites>
