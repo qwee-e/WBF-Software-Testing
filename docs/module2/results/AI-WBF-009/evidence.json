@@ -1,0 +1,26 @@
+{
+  "case": "AI-WBF-009",
+  "counts": {
+    "source_examples": 808,
+    "wbf_calls": 808,
+    "output_boxes": 10643,
+    "empty_outputs": 48
+  },
+  "configurations": {
+    "absent_model_aware_avg/overflow=True": 26,
+    "absent_model_aware_avg/overflow=False": 55,
+    "box_and_model_avg/overflow=True": 71,
+    "box_and_model_avg/overflow=False": 82,
+    "max/overflow=True": 48,
+    "max/overflow=False": 107,
+    "avg/overflow=True": 53,
+    "avg/overflow=False": 366
+  },
+  "tolerance": {
+    "atol": 1e-06,
+    "rtol": 1e-05
+  },
+  "samples": [],
+  "findings": [],
+  "details": {}
+}
