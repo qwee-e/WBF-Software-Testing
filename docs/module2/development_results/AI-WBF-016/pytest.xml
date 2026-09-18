@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.749" timestamp="2026-09-18T09:03:26.215806+08:00" hostname="LENOVO"><testcase classname="ai_tests.test_ai_wbf_016" name="test_structured_fuzz" time="0.540"><failure message="AssertionError: 1 main-domain inputs violated properties; see evidence.json for classification, minimal inputs and replays&#10;assert not 1">ai_tests\test_ai_wbf_016.py:100: in test_structured_fuzz
+    assert not audit.counts['main_violating_inputs'], (
+E   AssertionError: 1 main-domain inputs violated properties; see evidence.json for classification, minimal inputs and replays
+E   assert not 1</failure></testcase></testsuite></testsuites>

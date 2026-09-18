@@ -153,6 +153,7 @@ class Audit:
         self.configurations = Counter()
         self.samples = []
         self.findings = []
+        self.details = {}
 
     def source(self, data):
         self.counts['source_examples'] += 1
@@ -177,6 +178,7 @@ class Audit:
         directory = Path(os.environ.get('AI_RESULTS_DIR', 'ai_test_results')) / self.case
         directory.mkdir(parents=True, exist_ok=True)
         payload = dict(case=self.case, counts=dict(self.counts), configurations=dict(self.configurations),
-                       tolerance=dict(atol=ATOL, rtol=RTOL), samples=self.samples, findings=self.findings)
+                       tolerance=dict(atol=ATOL, rtol=RTOL), samples=self.samples, findings=self.findings,
+                       details=self.details)
         (directory / 'evidence.json').write_text(json.dumps(json_safe(payload), ensure_ascii=False,
                                                 indent=2, allow_nan=False), encoding='utf-8')

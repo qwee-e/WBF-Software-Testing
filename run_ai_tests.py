@@ -53,6 +53,9 @@ def main():
                                     errors=sum(t.find('error') is not None for t in tests)),
                         python=platform.python_version(), platform=platform.platform(),
                         packages={p: importlib.metadata.version(p) for p in ('numpy', 'numba', 'pytest', 'hypothesis')},
+                        execution_options={'AI_FUZZ_CANDIDATES': env.get('AI_FUZZ_CANDIDATES', '3000')},
+                        test_code_sha256={str(p.relative_to(ROOT)).replace('\\', '/'): hashlib.sha256(p.read_bytes()).hexdigest()
+                                          for p in sorted((ROOT / 'ai_tests').glob('*.py'))},
                         source_sha256=before,
                         reference_commit=subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip())
         (target / 'run.json').write_text(json.dumps(metadata, ensure_ascii=False, indent=2), encoding='utf-8')

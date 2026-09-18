@@ -1,0 +1,11 @@
+{
+  "passed": [
+    "row permutation accepted",
+    "coordinate corruption rejected",
+    "label association corruption rejected",
+    "score association corruption rejected",
+    "avg overflow flag changes score upper oracle",
+    "max still bounded when overflow flag true",
+    "NaN detected"
+  ]
+}

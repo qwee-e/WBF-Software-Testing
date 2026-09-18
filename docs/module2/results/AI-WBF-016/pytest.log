@@ -1,0 +1,12 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+____________________________ test_structured_fuzz _____________________________
+ai_tests\test_ai_wbf_016.py:100: in test_structured_fuzz
+    assert not audit.counts['main_violating_inputs'], (
+E   AssertionError: 11 main-domain inputs violated properties; see evidence.json for classification, minimal inputs and replays
+E   assert not 11
+---------------------------- Captured stdout call -----------------------------
+{"counts": {"candidates": 3000, "exploratory_candidates": 300, "mutation:model_count": 300, "accepted": 3000, "exploratory_accepted": 300, "seed:20260918016:accepted": 600, "source_examples": 3000, "wbf_calls": 3324, "candidate_calls": 3000, "exploratory_warning_inputs": 299, "exploratory_violating_inputs": 299, "exploratory:nonfinite": 299, "main_candidates": 2700, "mutation:duplicate_detection": 300, "main_accepted": 2700, "mutation:dense_overlap": 300, "mutation:empty_model": 300, "mutation:label_bijection": 300, "mutation:permutation": 300, "mutation:near_threshold": 300, "mutation:numeric_scale": 300, "mutation:filter_and_mode": 300, "mutation:box_count": 300, "main_violating_inputs": 11, "main:score_upper": 11, "seed:20260918017:accepted": 600, "seed:20260918018:accepted": 600, "seed:20260918019:accepted": 600, "seed:20260918020:accepted": 600, "shrink_calls": 306, "shrink_attempts": 306, "replay_calls": 18}, "witness_groups": 9}
+=========================== short test summary info ===========================
+FAILED ai_tests/test_ai_wbf_016.py::test_structured_fuzz - AssertionError: 11...
+1 failed in 2.87s

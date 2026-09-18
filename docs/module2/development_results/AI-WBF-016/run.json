@@ -1,0 +1,51 @@
+{
+  "case": "AI-WBF-016",
+  "started_utc": "2026-09-18T01:03:25.071060+00:00",
+  "elapsed_seconds": 2.032,
+  "command": [
+    "E:\\WBF\\WBF-Software-Testing-main\\.venv-ai\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "pytest",
+    "ai_tests\\test_ai_wbf_016.py",
+    "-q",
+    "-ra",
+    "--tb=short",
+    "--junitxml=E:\\WBF\\WBF-Software-Testing-main\\docs\\module2\\development_results\\AI-WBF-016\\pytest.xml"
+  ],
+  "exit_code": 1,
+  "pytest": {
+    "collected": 1,
+    "failed": 1,
+    "errors": 0
+  },
+  "python": "3.10.16",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "numpy": "1.23.5",
+    "numba": "0.60.0",
+    "pytest": "9.0.3",
+    "hypothesis": "6.168.0"
+  },
+  "execution_options": {
+    "AI_FUZZ_CANDIDATES": "150"
+  },
+  "test_code_sha256": {
+    "ai_tests/__init__.py": "439e6243c881db9ae1aad686091619cd0def9da0c71b90736a9ba7ff1ac2639a",
+    "ai_tests/bridge.py": "581e134df76257e5f419c9283f4446d6100253beb4ca67e6014becda3e7e3462",
+    "ai_tests/conftest.py": "8dd929c2b3ea2af8d59aa24aff908af5daa131aca177b10fb14f301d6928535e",
+    "ai_tests/fuzzing.py": "4becec185e279845f77a1d7b4b1997f78d091bd83bb3572b0ce5b55b186e30e3",
+    "ai_tests/support.py": "1d2f83b3875724a23ede5ec703924d24f679e44b7ca7f22ccb5973b6df472bdf",
+    "ai_tests/test_ai_wbf_001.py": "e949d3c675ff8390cda5b835a3d017e47792dbd485bd98ed31a684c3a6718999",
+    "ai_tests/test_ai_wbf_002.py": "780a4599a8da2c732a9f08bc49dfd6f9edefe6bdf49c5dd4a0030850edeb4ccb",
+    "ai_tests/test_ai_wbf_004.py": "1602d0d678ddaa978b0fb6b62e16f902493db3fb952aec832afd3b05171cbbb5",
+    "ai_tests/test_ai_wbf_005.py": "98d3460d8fed2baf27bb6406dc423022f7a53ca231fd75e7a3eabf89d3719f92",
+    "ai_tests/test_ai_wbf_006.py": "ef60bb6e5d5978f50152215fbf1421f99084601a4913f7948f566772324e00b0",
+    "ai_tests/test_ai_wbf_008.py": "97eef7478b6c1d1e523d92b8c6024dee7d6b0ae33e1aeb37ce497b41d1762058",
+    "ai_tests/test_ai_wbf_014.py": "0b0f6d693c23522feccd44bf73045ee69e5e4f3d66c0f9c723945b93f21c7fba",
+    "ai_tests/test_ai_wbf_016.py": "72d449e7dbe1e66a97b47d75f793fad37b2d773ca5b301e5769ea9101e8c7b5e"
+  },
+  "source_sha256": "a9663b421bc3adf4c42d74ccb572d1e2e149ee2a1c5aab2a6e88eec46c6b13b9",
+  "reference_commit": "254dfa93c134416c96379ee4785d0b155e8cf034"
+}

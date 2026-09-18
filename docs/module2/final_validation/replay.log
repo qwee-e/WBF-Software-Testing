@@ -1,0 +1,342 @@
+{
+  "classification": "exploratory_numeric_risk_requires_review",
+  "expected_issue": "nonfinite",
+  "reproduced": true,
+  "report": {
+    "output": [
+      [
+        [
+          "inf",
+          "inf",
+          "inf",
+          "inf"
+        ]
+      ],
+      [
+        "inf"
+      ],
+      [
+        0.0
+      ]
+    ],
+    "exception": null,
+    "warnings": [
+      "overflow encountered in add"
+    ],
+    "stdout": "",
+    "violations": [
+      "nonfinite"
+    ]
+  }
+}
+
+{
+  "classification": "exploratory_numeric_risk_requires_review",
+  "expected_issue": "nonfinite",
+  "reproduced": true,
+  "report": {
+    "output": [
+      [
+        [
+          "nan",
+          "nan",
+          "nan",
+          "nan"
+        ]
+      ],
+      [
+        "nan"
+      ],
+      [
+        0.0
+      ]
+    ],
+    "exception": null,
+    "warnings": [
+      "invalid value encountered in divide",
+      "invalid value encountered in double_scalars"
+    ],
+    "stdout": "",
+    "violations": [
+      "nonfinite"
+    ]
+  }
+}
+
+{
+  "classification": "exploratory_numeric_risk_requires_review",
+  "expected_issue": "nonfinite",
+  "reproduced": true,
+  "report": {
+    "output": [
+      [
+        [
+          "inf",
+          "inf",
+          "inf",
+          "inf"
+        ]
+      ],
+      [
+        "inf"
+      ],
+      [
+        0.0
+      ]
+    ],
+    "exception": null,
+    "warnings": [
+      "overflow encountered in add"
+    ],
+    "stdout": "",
+    "violations": [
+      "nonfinite"
+    ]
+  }
+}
+
+{
+  "classification": "exploratory_numeric_risk_requires_review",
+  "expected_issue": "nonfinite",
+  "reproduced": true,
+  "report": {
+    "output": [
+      [
+        [
+          "inf",
+          "inf",
+          "inf",
+          "inf"
+        ]
+      ],
+      [
+        "nan"
+      ],
+      [
+        0.0
+      ]
+    ],
+    "exception": null,
+    "warnings": [
+      "invalid value encountered in double_scalars",
+      "overflow encountered in add"
+    ],
+    "stdout": "",
+    "violations": [
+      "nonfinite"
+    ]
+  }
+}
+
+{
+  "classification": "exploratory_numeric_risk_requires_review",
+  "expected_issue": "nonfinite",
+  "reproduced": true,
+  "report": {
+    "output": [
+      [
+        [
+          "nan",
+          "nan",
+          "nan",
+          "nan"
+        ]
+      ],
+      [
+        "nan"
+      ],
+      [
+        0.0
+      ]
+    ],
+    "exception": null,
+    "warnings": [
+      "invalid value encountered in divide",
+      "invalid value encountered in double_scalars"
+    ],
+    "stdout": "",
+    "violations": [
+      "nonfinite"
+    ]
+  }
+}
+
+{
+  "classification": "exploratory_numeric_risk_requires_review",
+  "expected_issue": "nonfinite",
+  "reproduced": true,
+  "report": {
+    "output": [
+      [
+        [
+          "inf",
+          "inf",
+          "inf",
+          "inf"
+        ]
+      ],
+      [
+        "nan"
+      ],
+      [
+        3.0
+      ]
+    ],
+    "exception": null,
+    "warnings": [
+      "invalid value encountered in double_scalars",
+      "overflow encountered in add"
+    ],
+    "stdout": "",
+    "violations": [
+      "nonfinite"
+    ]
+  }
+}
+
+{
+  "classification": "known_module1_score_overflow",
+  "expected_issue": "score_upper",
+  "reproduced": true,
+  "report": {
+    "output": [
+      [
+        [
+          0.4195277988910675,
+          0.4120815694332123,
+          0.881262481212616,
+          0.9269541501998901
+        ]
+      ],
+      [
+        1.1101865768432617
+      ],
+      [
+        8.0
+      ]
+    ],
+    "exception": null,
+    "warnings": [],
+    "stdout": "",
+    "violations": [
+      "score_upper"
+    ]
+  }
+}
+
+{
+  "classification": "exploratory_numeric_risk_requires_review",
+  "expected_issue": "nonfinite",
+  "reproduced": true,
+  "report": {
+    "output": [
+      [
+        [
+          "inf",
+          "inf",
+          "inf",
+          "inf"
+        ]
+      ],
+      [
+        "inf"
+      ],
+      [
+        0.0
+      ]
+    ],
+    "exception": null,
+    "warnings": [
+      "overflow encountered in add"
+    ],
+    "stdout": "",
+    "violations": [
+      "nonfinite"
+    ]
+  }
+}
+
+{
+  "classification": "exploratory_numeric_risk_requires_review",
+  "expected_issue": "nonfinite",
+  "reproduced": true,
+  "report": {
+    "output": [
+      [
+        [
+          "inf",
+          "inf",
+          "inf",
+          "inf"
+        ]
+      ],
+      [
+        "inf"
+      ],
+      [
+        0.0
+      ]
+    ],
+    "exception": null,
+    "warnings": [
+      "overflow encountered in add"
+    ],
+    "stdout": "",
+    "violations": [
+      "nonfinite"
+    ]
+  }
+}
+
+{
+  "classification": "algorithm_order_sensitivity_not_automatic_bug",
+  "expected_order_sensitivity_reproduced": true,
+  "output": [
+    [
+      [
+        0.18732095305804508,
+        0.1601258269452629,
+        0.36472456356037813,
+        0.34113628668990076
+      ],
+      [
+        0.2671525776386261,
+        0.16012582182884216,
+        0.44455617666244507,
+        0.34113627672195435
+      ]
+    ],
+    [
+      0.25,
+      0.25
+    ],
+    [
+      3.0,
+      3.0
+    ]
+  ],
+  "permuted_output": [
+    [
+      [
+        0.2937631193594449,
+        0.1601258269452629,
+        0.47116672986177793,
+        0.34113628668990076
+      ],
+      [
+        0.21393148601055145,
+        0.16012582182884216,
+        0.3913350999355316,
+        0.34113627672195435
+      ]
+    ],
+    [
+      0.25,
+      0.25
+    ],
+    [
+      3.0,
+      3.0
+    ]
+  ]
+}

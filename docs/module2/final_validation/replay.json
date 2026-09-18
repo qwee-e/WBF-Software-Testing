@@ -1,0 +1,51 @@
+[
+  {
+    "finding": 0,
+    "classification": "exploratory_numeric_risk_requires_review",
+    "exit_code": 0
+  },
+  {
+    "finding": 1,
+    "classification": "exploratory_numeric_risk_requires_review",
+    "exit_code": 0
+  },
+  {
+    "finding": 2,
+    "classification": "exploratory_numeric_risk_requires_review",
+    "exit_code": 0
+  },
+  {
+    "finding": 3,
+    "classification": "exploratory_numeric_risk_requires_review",
+    "exit_code": 0
+  },
+  {
+    "finding": 4,
+    "classification": "exploratory_numeric_risk_requires_review",
+    "exit_code": 0
+  },
+  {
+    "finding": 5,
+    "classification": "exploratory_numeric_risk_requires_review",
+    "exit_code": 0
+  },
+  {
+    "finding": 6,
+    "classification": "known_module1_score_overflow",
+    "exit_code": 0
+  },
+  {
+    "finding": 7,
+    "classification": "exploratory_numeric_risk_requires_review",
+    "exit_code": 0
+  },
+  {
+    "finding": 8,
+    "classification": "exploratory_numeric_risk_requires_review",
+    "exit_code": 0
+  },
+  {
+    "case": "014",
+    "exit_code": 0
+  }
+]
