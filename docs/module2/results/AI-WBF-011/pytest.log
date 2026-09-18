@@ -1,0 +1,10 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+________________ test_score_bounds_and_overflow_mode_relations _________________
+ai_tests/test_ai_wbf_011.py:82: in test_score_bounds_and_overflow_mode_relations
+    assert bound_violations == 0, f'{bound_violations} configurations exceeded score 1'
+E   AssertionError: 9 configurations exceeded score 1
+E   assert 9 == 0
+=========================== short test summary info ============================
+FAILED ai_tests/test_ai_wbf_011.py::test_score_bounds_and_overflow_mode_relations
+1 failed in 2.78s
