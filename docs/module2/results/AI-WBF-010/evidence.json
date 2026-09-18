@@ -1,0 +1,65 @@
+{
+  "case": "AI-WBF-010",
+  "counts": {
+    "source_examples": 800,
+    "wbf_calls": 800,
+    "valid_input_boxes": 43851,
+    "output_boxes": 41547,
+    "zero_model_inputs": 89
+  },
+  "configurations": {
+    "avg/overflow=False": 100,
+    "avg/overflow=True": 100,
+    "max/overflow=False": 100,
+    "max/overflow=True": 100,
+    "box_and_model_avg/overflow=False": 100,
+    "box_and_model_avg/overflow=True": 100,
+    "absent_model_aware_avg/overflow=False": 100,
+    "absent_model_aware_avg/overflow=True": 100
+  },
+  "tolerance": {
+    "atol": 1e-06,
+    "rtol": 1e-05
+  },
+  "samples": [
+    {
+      "index": 0,
+      "model_count": 0,
+      "valid_input_boxes": 0,
+      "output_boxes": 0,
+      "labels": []
+    },
+    {
+      "index": 1,
+      "model_count": 1,
+      "valid_input_boxes": 5,
+      "output_boxes": 5,
+      "labels": [
+        0,
+        1,
+        2,
+        6
+      ]
+    },
+    {
+      "index": 2,
+      "model_count": 2,
+      "valid_input_boxes": 44,
+      "output_boxes": 40,
+      "labels": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  ],
+  "findings": [],
+  "details": {}
+}
