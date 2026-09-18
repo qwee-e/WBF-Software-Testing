@@ -1,0 +1,33 @@
+{
+  "case": "AI-WBF-001",
+  "started_utc": "2026-09-18T00:50:55.231428+00:00",
+  "elapsed_seconds": 4.25,
+  "command": [
+    "E:\\WBF\\WBF-Software-Testing-main\\.venv-ai\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "pytest",
+    "ai_tests\\test_ai_wbf_001.py",
+    "-q",
+    "-ra",
+    "--tb=short",
+    "--junitxml=E:\\WBF\\WBF-Software-Testing-main\\docs\\module2\\results\\AI-WBF-001\\pytest.xml"
+  ],
+  "exit_code": 0,
+  "pytest": {
+    "collected": 1,
+    "failed": 0,
+    "errors": 0
+  },
+  "python": "3.10.16",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "numpy": "1.23.5",
+    "numba": "0.60.0",
+    "pytest": "9.0.3",
+    "hypothesis": "6.168.0"
+  },
+  "source_sha256": "a9663b421bc3adf4c42d74ccb572d1e2e149ee2a1c5aab2a6e88eec46c6b13b9",
+  "reference_commit": "0089ae9b23e326e5ba183618feee8c159bfbf397"
+}

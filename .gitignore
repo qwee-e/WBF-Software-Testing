@@ -6,6 +6,9 @@ __pycache__/
 artifacts/
 .matplotlib/
 .venv-test/
+.venv-ai/
+.hypothesis/
+ai_test_results/
 test_results/
 deliverables/*
 !deliverables/WBF_module1_自动化测试工程.zip
