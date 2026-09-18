@@ -1,0 +1,26 @@
+{
+  "case_id": "AI-WBF-003",
+  "executed_at": "2026-09-18T08:47:41+08:00",
+  "command": "python -m pytest ai_tests/test_ai_wbf_003.py -v -s --junitxml=results/ai_wbf_003/junit.xml",
+  "exit_code": 0,
+  "result": "4 passed",
+  "source_cases": 400,
+  "conf_types": [
+    "avg",
+    "max",
+    "box_and_model_avg",
+    "absent_model_aware_avg"
+  ],
+  "maximum_box_absolute_error": 0.0,
+  "maximum_score_absolute_error": 0.0,
+  "environment": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "pytest": "9.1.1"
+  },
+  "sha256": {
+    "ai_tests/test_ai_wbf_003.py": "f0727e082c3f694b3afc6cec87a8d1b18255be5a51325e72ca3a09ffd2c1d0eb",
+    "ensemble_boxes/ensemble_boxes_wbf.py": "a9663b421bc3adf4c42d74ccb572d1e2e149ee2a1c5aab2a6e88eec46c6b13b9",
+    "results/ai_wbf_003/junit.xml": "05aaff0ea8d5e5b5bf7fc40a28dda1b1d2f4075777b867dbc30b8e4ee8e044a0"
+  }
+}
